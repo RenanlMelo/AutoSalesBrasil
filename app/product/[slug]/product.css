@@ -1,0 +1,9 @@
+#hover path {
+  fill: #e2e8f0;
+  transition: fill 200ms;
+}
+
+#hover:hover path {
+    fill: #25D366; /* ou qualquer outra cor desejada */
+  }
+  

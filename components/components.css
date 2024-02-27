@@ -1,0 +1,143 @@
+.carousel {
+  --swiper-navigation-color: #eee;
+  --swiper-pagination-color: #eee;
+}
+
+.swiper-pagination {
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 12px;
+  color: #000;
+  margin: 0 4px;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  color: #eee;
+  background: #1b4d83;
+  transform: scale(0.1) 0.5s;
+  cursor: pointer;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  height: 40px;
+  margin-top: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  height: 45px;
+  font-size: 25px;
+  margin-left: 4px;
+  background: #505050;
+  padding: 8px 8px 8px 6px;
+  border-radius: 50%;
+  transition: all 0.25s;
+}
+
+.swiper-button-prev:hover::after {
+  opacity: 0.7;
+}
+
+.swiper-button-next::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  height: 45px;
+  font-size: 25px;
+  margin-right: 4px;
+  background: #505050;
+  padding: 8px 4px 8px 8px;
+  border-radius: 50%;
+  transition: all 0.25s;
+}
+
+.swiper-button-next:hover::after {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px) {
+  .swiper-button-prev::after {
+    height: 30px;
+    font-size: 15px;
+    padding: 4px 4px 4px 3px;
+  }
+
+  .swiper-button-next::after {
+    height: 30px;
+    font-size: 15px;
+    padding: 4px 3px 4px 4px;
+  }
+
+  .swiper-pagination-bullet {
+    margin-top: 0;
+    transform: scale(0.8);
+  }
+}
+
+.social-link:hover .social-icon {
+  fill: #f271a2;
+  background-color: rgba(40, 40, 40, 1);
+}
+
+.social-link:hover p {
+  color: #f271a2;
+}
+
+.phone-link:hover .phone-icon {
+  fill: #25d366;
+  background-color: rgba(40, 40, 40, 1);
+}
+
+.phone-link:hover p {
+  color: #25d366;
+}
+
+.social-link p::after{
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #f271a2;
+  transform: scale(0%);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.phone-link p::after{
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #25d366;
+  transform: scale(0%);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover p::after,
+.phone-link:hover p::after {
+  transform: scaleX(1);
+}
