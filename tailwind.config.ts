@@ -67,10 +67,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "loading": {
+          from: { rotate: "0deg"},
+          to: { rotate: "360deg"}
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "loading": "loading 1.15s ease-out infinite",
       },
       boxShadow: {
         about: "5px 0 20px -5px rgba(0, 0, 0, .2)",
@@ -82,6 +87,10 @@ const config = {
         whatsappHover: "0 0 10px 4px rgba(36, 201, 36, .6)",
         sidebar: "inset 0 40px 20px -24px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .3)",
         sidebaritems: "0 0 20px -10px rgba(0,0,0,1)",
+        line: "0 0 10px 1px rgba(166, 0, 255, .6)",
+      },
+      fontFamily: {
+        poppins: ['Poppins'],
       }
     },
   },

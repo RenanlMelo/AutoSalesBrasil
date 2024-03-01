@@ -42,7 +42,7 @@ export default async function ServicosPage() {
             Nossos Serviços
           </p>
           <p className="text-slate-300 font-extralight text-lg">
-            Clique para mais informações
+            Clique abaixo para mais informações
           </p>
         </div>
         <ServicosText />

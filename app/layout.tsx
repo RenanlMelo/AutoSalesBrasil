@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ background: "#f8f8ff" }} className={inter.className}>
+      <body style={{ background: "#f8f8ff", fontFamily: "poppins" }} className={inter.className}>
         <style>{scrollbarStyle}</style>
         <Navbar />
         {children}

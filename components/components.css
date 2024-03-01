@@ -3,6 +3,10 @@
   --swiper-pagination-color: #eee;
 }
 
+.swiper-container .swiper-notification{
+  display: none;
+}
+
 .swiper-pagination {
   width: 100%;
 }
@@ -52,7 +56,7 @@
   height: 45px;
   font-size: 25px;
   margin-left: 4px;
-  background: #505050;
+  background: #303030;
   padding: 8px 8px 8px 6px;
   border-radius: 50%;
   transition: all 0.25s;
@@ -60,6 +64,7 @@
 
 .swiper-button-prev:hover::after {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .swiper-button-next::after {
@@ -70,7 +75,7 @@
   height: 45px;
   font-size: 25px;
   margin-right: 4px;
-  background: #505050;
+  background: #303030;
   padding: 8px 4px 8px 8px;
   border-radius: 50%;
   transition: all 0.25s;
@@ -78,6 +83,7 @@
 
 .swiper-button-next:hover::after {
   opacity: 0.7;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1024px) {

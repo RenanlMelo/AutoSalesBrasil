@@ -67,7 +67,7 @@ export default function servicosText() {
               className="cursor-pointer text-slate-300 z-10 w-1/4 text-3xl font-bold text-center p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
               onClick={openInfo2}
             >
-              <h1>Vendas</h1>
+              <h1>Venda</h1>
               <img className="w-20" src="./sell.png" />
             </div>
 

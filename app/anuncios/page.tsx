@@ -26,6 +26,8 @@ export default async function anunciosPage() {
     return price.toLocaleString("pr-BR", {
       style: "currency",
       currency: "BRL",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
     });
   };
 

@@ -31,13 +31,14 @@ export default async function ProductPage({
 }) {
   const data: fullProduct = await getData(params.slug);
 
-  const price = data.preco.toString();
-  let formattedPrice = price;
-
-  if (price.length >= 4) {
-    formattedPrice =
-      price.slice(0, price.length - 3) + "." + price.slice(price.length - 3);
-  }
+  const formatPrice = (price: number) => {
+    return price.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    });
+  };
 
   return (
     <>
@@ -81,7 +82,7 @@ export default async function ProductPage({
                 <span className="text-md sm:text-lg font-bold">Descrição</span>
                 <p className="text-sm sm:text-md">{data.descricao}</p>
               </div>
-              <p className="text-2xl p-2">R$ {formattedPrice}</p>
+              <p className="text-2xl p-2">{formatPrice(data.preco)}</p>
               <a
                 id="hover"
                 className="mt-6 bg-slate-900 w-full py-8 flex flex-col justify-center items-center scale-95 hover:scale-100 duration-200 text-slate-200  hover:text-[#25D366]"
