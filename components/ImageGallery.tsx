@@ -23,30 +23,30 @@ export default function ImageGallery({ images }: iAppProps) {
     setBigImage(image);
   };
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
-    },
-  };
-
   return (
     <>
       <div className="flex flex-col xl:col-span-3 mb-8">
         <div className="bg-gray-100 hidden lg:block">
-            <Image
-              src={urlFor(bigImage).url()}
-              alt="Photo"
-              width={750}
-              height={750}
-              className="h-full w-full object-cover object-center"
-            />
-
-          </div>
+          <Image
+            src={urlFor(bigImage).url()}
+            alt="Photo"
+            width={1000}
+            height={750}
+            className="w-full object-cover object-center aspect-video"
+            onLoadingComplete={({ naturalWidth, naturalHeight }) => {
+              setBigImage((prevBigImage: typeof bigImage) => ({
+                ...prevBigImage,
+                width: naturalWidth,
+                height: naturalHeight,
+              }));
+            }}
+          />
+        </div>
         <div>
           <Swiper
             slidesPerView={1}
             navigation={true}
+            spaceBetween={20}
             breakpoints={{
               1024: {
                 slidesPerView: 3,

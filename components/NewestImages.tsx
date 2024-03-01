@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { simplifiedProduct } from "@/app/interface";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,19 +18,26 @@ interface iAppProps {
 }
 
 export default function NewestImages({ products }: iAppProps) {
-
   const formatPrice = (price: number) => {
     return price.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
     });
   };
 
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + (index + 1) + '</span>';
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
+  };
+
+  const [loading, setLoading] = useState<string | null>(null);
+
+  const handleImageClick = (productId: string) => {
+    setLoading(productId);
   };
 
   return (
@@ -39,47 +46,53 @@ export default function NewestImages({ products }: iAppProps) {
         slidesPerView={1}
         navigation={true}
         pagination={true}
+        spaceBetween={50}
         loop={true}
         breakpoints={{
-          1024: {
+          1280: {
             slidesPerView: 3,
           },
         }}
-        grabCursor={true}
         className="carousel"
       >
         {products.map((product: simplifiedProduct) => (
           <SwiperSlide
             key={product._id}
-            className="m-10 shadow-anuncios rounded-lg"
+            className="my-10 shadow-anuncios rounded-lg"
           >
-            <div className="group-relative overflow-hidden shadow-anuncios rounded-lg">
-              <div className="aspect-[1.7/1] w-full overflow-hidden bg-gray-200 group-hover:opacity-75 lg:h-80">
-                <Link href={`/product/${product.slug}`}>
+            <div className="shadow-anuncios rounded-lg">
+              <Link href={`/product/${product.slug}`}>
+                <div
+                  onClick={() => handleImageClick(product._id)}
+                  className="aspect-video overflow-hidden flex justify-center items-center w-full  group-hover:opacity-75 relative"
+                >
+                  {loading === product._id && (
+                    <div className="bg-black/60 z-[100] w-full h-full absolute flex justify-center items-center">
+                      <span className="w-16 h-16 block bg-transparent border-transparent border-2 border-t-slate-200 rounded-[50%] animate-loading"></span>
+                    </div>
+                  )}
                   <Image
                     src={product.imageUrl}
                     alt="Product image"
-                    className="w-full h-full object-cover lg:h-full lg:w-full scale-100 hover:scale-110 duration-500 ease-in-out"
-                    width={700}
-                    height={270}
+                    className="object-cover scale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover"
+                    width={1200}
+                    height={800}
                   />
-                </Link>
-              </div>
-              <div className="mt-4 pb-2 flex justify-between">
-                <div className="px-8 pt-4 pb-6">
-                  <h3 className="text-xl text-gray-700">
-                    <Link href={`/product/${product.slug}`}>
+                </div>
+                <div className="mt-4 pb-6 flex justify-between">
+                  <div className="pl-8 pt-4 pb-6">
+                    <h3 className="text-md md:text-xl text-gray-700">
                       {product.modelo}
-                    </Link>
-                  </h3>
-                  <p className="mt-1 text-lg text-gray-500">
-                    {product.categoria}
+                    </h3>
+                    <p className="mt-1 absolute text-md md:text-lg text-gray-500">
+                      {product.categoria}
+                    </p>
+                  </div>
+                  <p className="text-lg md:text-xl font-medium pr-8 py-4 text-gray-900">
+                    {formatPrice(product.preco)}
                   </p>
                 </div>
-                <p className="text-xl font-medium pr-8 pt-4 text-gray-900">
-                  {formatPrice(product.preco)}
-                </p>
-              </div>
+              </Link>
             </div>
           </SwiperSlide>
         ))}

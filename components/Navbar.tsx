@@ -34,7 +34,7 @@ const Navbar = () => {
             className="w-16 rounded-full aspect-square xl:w-24 md:w-20"
           />
           <div className="flex flex-col items-center">
-            <h1 className="text-[#0B0227] tracking-tight font-black text-lg md:text-2xl xl:text-3xl font-mono px-2">
+            <h1 className="text-[#0B0227] font-semibold text-lg md:text-2xl xl:text-3xl px-2">
               Auto Sales Brasil
             </h1>
             <span className="w-full bg-[#0B0227] h-px" />
