@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -29,8 +30,9 @@ const Navbar = () => {
           href="/"
           className="flex justify-center items-center gap-4 lg:gap-6"
         >
-          <img
+          <Image
             src="/logo.png"
+            alt="logo"
             className="w-16 rounded-full aspect-square xl:w-24 md:w-20"
           />
           <div className="flex flex-col items-center">

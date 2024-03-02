@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function servicosText() {
   const [showText, setShowText] = useState(false);
@@ -60,7 +61,7 @@ export default function servicosText() {
               onClick={openInfo}
             >
               <h1>Compra</h1>
-              <img className="w-16" src="./car4.png" />
+              <Image className="w-16" alt="Compra" src="./car4.png" />
             </div>
 
             <div //2
@@ -68,7 +69,7 @@ export default function servicosText() {
               onClick={openInfo2}
             >
               <h1>Venda</h1>
-              <img className="w-20" src="./sell.png" />
+              <Image className="w-20" alt="Venda" src="./sell.png" />
             </div>
 
             <div
@@ -76,7 +77,7 @@ export default function servicosText() {
               onClick={openInfo3}
             >
               <h1>Plano Content</h1>
-              <img className="w-16" src="./plan2.png" />
+              <Image className="w-16" alt="Plano Content" src="./plan2.png" />
             </div>
           </div>
 
@@ -104,6 +105,7 @@ export default function servicosText() {
                 animate={{ opacity: 1 }}
                 onClick={closeInfo}
                 src="./close.svg"
+                alt="Fechar"
                 className="absolute top-4 right-4 bg-slate-700/70 p-2 rounded-full hover:bg-slate-600/30 hover:scale-110 duration-200"
               />
               <motion.ul className="text-xl text-slate-300 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
@@ -189,6 +191,7 @@ export default function servicosText() {
                 animate={{ opacity: 1 }}
                 onClick={closeInfo2}
                 src="./close.svg"
+                alt="Fechar"
                 className="absolute top-4 right-4 bg-slate-700/70 p-2 rounded-full hover:bg-slate-600/30 hover:scale-110 duration-200"
               />
               <motion.ul className="text-xl text-slate-300 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
@@ -264,6 +267,7 @@ export default function servicosText() {
                 animate={{ opacity: 1 }}
                 onClick={closeInfo3}
                 src="./close.svg"
+                alt="Fechar"
                 className="absolute top-4 right-4 bg-slate-700/70 p-2 rounded-full hover:bg-slate-600/30 hover:scale-110 duration-200"
               />
               <motion.ul className="text-xl text-slate-300 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] py-10 px-20 rounded-xl max-w-5xl flex flex-col justify-center items-start text-justify">

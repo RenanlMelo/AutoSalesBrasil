@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <>
@@ -13,10 +15,11 @@ export default function About() {
           </div>
           <div className="flex justify-center items-center sm:items-stretch flex-col lg:flex-row px-0 xl:px-32 2xl:px-60">
             <div className="w-full lg:bg-transparent bg-[#0B0227] lg:w-1/2 flex justify-center lg:justify-end ">
-              <img
+              <Image
                 src="/logo.png"
+                alt="logo"
                 className="w-2/3 mx-6 md:mx-0 lg:w-full  aspect-square"
-              ></img>
+              ></Image>
             </div>
             <div className="w-full flex flex-col justify-center items-start border-r shadow-about border-zinc-400">
               <p className="text-[#404040] text-lg font-light m-12 pb-6 mb-0 indent-10 leading-7 text-justify">
