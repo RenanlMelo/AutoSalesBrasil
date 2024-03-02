@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
+import Image from "next/image";
 
 export default function Footer() {
   const [show, setShow] = useState(false);
@@ -66,13 +67,14 @@ export default function Footer() {
       id="footer"
       className="bg-[#090114] w-full flex flex-col-reverse lg:flex-row justify-between items-center bg-center px-16 lg:px-28 pt-24 lg:pt-32 relative"
     >
-      <img
+      <Image
         src="arrow.svg"
+        alt="Retornar ao topo do site"
         className="bg-zinc-600 cursor-pointer rounded-full p-2 w-16 md:w-20 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 hover:bg-zinc-700/80 scale-[85%] hover:scale-100 duration-200"
         onMouseOver={showMessage}
         onMouseLeave={hideMessage}
         onClick={scrollToTop}
-      ></img>
+      ></Image>
       <AnimatePresence>
         {show && (
           <motion.span
@@ -185,8 +187,9 @@ export default function Footer() {
           </div>
         </div>
         <div className=" text-2xl text-zinc-200 border-t border-zinc-600 py-8 mt-10 md:mt-20 w-full flex flex-col md:flex-row gap-y-6 md:gap-y-0 justify-center items-center gap-x-6">
-          <img
+          <Image
             src="logo.png"
+            alt="logo"
             className="w-24 rounded-full shadow-logoFooter font-krona"
           />
           <div className="flex flex-col items-center">
