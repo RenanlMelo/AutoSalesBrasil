@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 
@@ -22,29 +22,43 @@ export default function Footer() {
   };
 
   const [email, setEmail] = useState("");
+  const [subscribeRes, setSubscribeRes] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+    const isValidEmail = /\S+@\S+\.\S+/.test(email);
+    if (!isValidEmail) {
+      setSubscribeRes("Por favor, insira um endereço de e-mail válido.");
+      return;
+    }
 
-      if (response.ok) {
-        alert("Subscribed successfully");
-      } else {
-        alert("Error subscribing");
+    try {
+      const checkEmailResponse = await axios.post(
+        "http://localhost:4000/users/check-email",
+        {
+          email,
+        }
+      );
+
+      if (checkEmailResponse.status === 200) {
+        const response = await axios.post("http://localhost:4000/users", {
+          email,
+        });
+
+        if (response.data.message === "Assinatura concluída com sucesso!") {
+          setSubscribeRes(response.data.message);
+        } 
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.log(error);
+      setSubscribeRes('Esse E-mail já está cadastrado')
     }
+  };
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>);
   };
 
   return (
@@ -80,24 +94,32 @@ export default function Footer() {
               <strong className="text-[#25D366]">Whatsapp</strong> e anuncie
               imediatamente!
             </span>
-            <div className="flex flex-col items-center justify-center h-full lg:max-w-sm">
+            <div className="flex flex-col items-center justify-center h-full lg:max-w-md">
               <p className="text-slate-200 mt-16 lg:mt-0 md:text-justify font-light mb-3 text-sm md:text-base">
                 Deseja receber conteúdos exclusivos e novos anúncios? Insira seu
-                email abaixo!
+                E-mail abaixo!
               </p>
-              <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={handleChange}
-                className="py-2 px-4 w-full my-2 rounded-lg text-zinc-300 bg-zinc-800 focus:outline-none focus:ring-[2px] focus:ring-slate-600"
-              />
-              <input
-                type="button"
-                onClick={handleSubmit}
-                className="bg-indigo-900 w-full cursor-pointer text-slate-300 text-md md:text-lg font-semibold p-2 rounded-lg scale-100 hover:scale-105 hover:bg-indigo-950 duration-200"
-                value="Enviar"
-              />
+              <form className="w-full relative">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="py-2 px-4 w-full my-2 rounded-lg text-zinc-300 bg-zinc-800 focus:outline-none focus:ring-[2px] focus:ring-slate-600"
+                />
+                <button
+                  type="submit"
+                  onClick={handleButtonClick}
+                  className="bg-indigo-900 w-full cursor-pointer text-slate-300 text-md md:text-lg font-semibold p-2 rounded-lg scale-100 hover:scale-105 hover:bg-indigo-950 duration-200"
+                >
+                  Enviar
+                </button>
+                {subscribeRes && (
+                  <div className="text-lg absolute translate-y-full w-full text-center bottom-0 text-zinc-400">
+                    {subscribeRes}
+                  </div>
+                )}
+              </form>
             </div>
           </div>
 
