@@ -50,9 +50,9 @@ export default function Team() {
             visão empreendedora, combinou sua fascinação por carros com um
             profundo interesse em finanças e gestão. Inspirado por ícones do
             mundo dos negócios, ele se comprometeu e compromete-se a se
-            aprimorar constantemente. "Nossa missão vai além de simplesmente
+            aprimorar constantemente. &#34;Nossa missão vai além de simplesmente
             vender veículos, é sobre construir uma relação com amigos clientes,
-            apaixonados tanto por qualidade quanto por confiabilidade."
+            apaixonados tanto por qualidade quanto por confiabilidade.&#34;
           </p>
         </div>
       </div>
