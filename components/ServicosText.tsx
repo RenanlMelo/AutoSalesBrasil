@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-export default function servicosText() {
+export default function ServicosText() {
   const [showText, setShowText] = useState(false);
 
   const openInfo = () => {
