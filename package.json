@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "nodemon back-end/index.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node back-end/index.js",
     "lint": "next lint"
   },
+  "proxy": "https://localhost:4000",
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
     "axios": "^1.6.7",
@@ -20,6 +21,7 @@
     "mongoose": "^8.2.0",
     "next": "14.1.0",
     "next-sanity": "^7.1.1",
+    "nodemon": "^3.1.0",
     "react": "^18",
     "react-dom": "^18",
     "react-router-dom": "^6.22.1",
