@@ -8,6 +8,9 @@
     "start": "node back-end/index.js",
     "lint": "next lint"
   },
+  "keywords": [
+    "sanity"
+  ],
   "proxy": "https://localhost:4000",
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
