@@ -20,7 +20,10 @@ app.use(cors(corsOptions));
 app.use("/", router);
 
 mongoose
-  .connect(process.env.MONGO)
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
