@@ -3,7 +3,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./routes/router");
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 const app = express();
 
@@ -20,7 +19,7 @@ app.use(cors(corsOptions));
 app.use("/", router);
 
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect('mongodb+srv://Faro30102012:Faro30102012@autosalesbrasildb.pwxusym.mongodb.net/?retryWrites=true&w=majority&appName=AutoSalesBrasilDB')
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
