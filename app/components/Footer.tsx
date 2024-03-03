@@ -30,7 +30,10 @@ export default function Footer() {
 
     const isValidEmail = /\S+@\S+\.\S+/.test(email);
     if (!isValidEmail) {
-      setSubscribeRes("Por favor, insira um endereço de e-mail válido.");
+      setSubscribeRes("Por favor, insira um endereço de E-mail válido.");
+          setTimeout(() => {
+            setSubscribeRes('');
+          }, 3000);
       return;
     }
 
@@ -49,11 +52,17 @@ export default function Footer() {
 
         if (response.data.message === "Assinatura concluída com sucesso!") {
           setSubscribeRes(response.data.message);
+          setTimeout(() => {
+            setSubscribeRes('');
+          }, 3000);
         } 
       }
     } catch (error) {
       console.log(error);
-      setSubscribeRes('Esse E-mail já está cadastrado')
+      setSubscribeRes('Esse E-mail já está cadastrado');
+      setTimeout(() => {
+        setSubscribeRes('');
+      }, 3000);
     }
   };
 
@@ -70,6 +79,8 @@ export default function Footer() {
       <Image
         src="arrow.svg"
         alt="Retornar ao topo do site"
+        width={50}
+        height={50}
         className="bg-zinc-600 cursor-pointer rounded-full p-2 w-16 md:w-20 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 hover:bg-zinc-700/80 scale-[85%] hover:scale-100 duration-200"
         onMouseOver={showMessage}
         onMouseLeave={hideMessage}
@@ -117,7 +128,7 @@ export default function Footer() {
                   Enviar
                 </button>
                 {subscribeRes && (
-                  <div className="text-lg absolute translate-y-full w-full text-center bottom-0 text-zinc-400">
+                  <div className="text-lg absolute translate-y-[125%] w-full text-center bottom-0 text-zinc-400">
                     {subscribeRes}
                   </div>
                 )}
@@ -188,8 +199,10 @@ export default function Footer() {
         </div>
         <div className=" text-2xl text-zinc-200 border-t border-zinc-600 py-8 mt-10 md:mt-20 w-full flex flex-col md:flex-row gap-y-6 md:gap-y-0 justify-center items-center gap-x-6">
           <Image
-            src="logo.png"
+            src="/logo.png"
             alt="logo"
+            width={120}
+            height={120}
             className="w-24 rounded-full shadow-logoFooter font-krona"
           />
           <div className="flex flex-col items-center">

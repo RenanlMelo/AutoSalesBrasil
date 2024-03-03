@@ -24,9 +24,9 @@ router.post("/users/check-email", async (req, res) => {
   const existingUser = await schemas.Users.findOne({ email });
 
   if (existingUser) {
-    res.status(400).json({ message: 'Este email já está cadastrado.'});
+    res.status(400).json({ message: 'Este E-mail já está cadastrado.'});
   } else {
-    res.status(200).json({ message: 'Email disponível para cadastro.'});
+    res.status(200).json({ message: 'E-mail disponível para cadastro.'});
   }
 });
 

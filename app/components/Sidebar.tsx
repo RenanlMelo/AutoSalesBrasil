@@ -11,7 +11,7 @@ export default function Sidebar() {
           <p className="text-xl py-3 w-full text-center hover:shadow-sidebaritems duration-150 ease-in-out">Nossa Equipe</p>
         </div>
         <div className="bg-[#303030] rounded-b-lg">
-          <Image src="/arrow.svg" alt="Seta" />
+          <Image src="/arrow.svg" alt="Seta" width={40} height={40} />
         </div>
       </div>
     </>

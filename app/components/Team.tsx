@@ -10,8 +10,10 @@ export default function Team() {
       <div className="grid gap-x-40 gap-y-20 w-full grid-rows-[2] grid-cols-1 xl:grid-cols-2 xl:grid-rows-1 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl my-6">
         <div className="flex justify-start items-start text-start flex-col col-span-1 row-start-1 w-full h-fit">
           <Image
-            src="./fotoGustavo.jpg"
+            src="/fotoGustavo.jpg"
             alt="Gustavo"
+            width={500}
+            height={500}
             className="w-[200px] md:w-[270px] mx-auto mb-10 rounded-full"
           />
           <h3 className="p-2 text-lg md:text-2xl font-bold text-[#6e97e3]">
@@ -34,8 +36,10 @@ export default function Team() {
 
         <div className="flex justify-start items-start text-start flex-col h-full col-span-1 row-start-2 xl:row-start-1 w-full">
           <Image
-            src="./fotoBruno.jpg"
+            src="/fotoBruno.jpg"
             alt="Bruno"
+            width={500}
+            height={500}
             className="w-[200px] md:w-[270px] mx-auto mb-10 rounded-full"
           />
           <h3 className="p-2 text-xl md:text-2xl font-bold text-[#6e97e3]">

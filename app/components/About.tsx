@@ -18,6 +18,8 @@ export default function About() {
               <Image
                 src="/logo.png"
                 alt="logo"
+                width={1000}
+                height={1000}
                 className="w-2/3 mx-6 md:mx-0 lg:w-full  aspect-square"
               ></Image>
             </div>

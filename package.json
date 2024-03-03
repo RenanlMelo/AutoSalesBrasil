@@ -2,13 +2,10 @@
   "name": "autosalesbrasil",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://renanlmelo.github.io/autosalesbrasil",
-  "scripts": {
-    "dev": "nodemon back-end/index.js",
+    "scripts": {
+    "dev": "next dev",
     "build": "next build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "node back-end/index.js",
+    "start": "next start",
     "lint": "next lint"
   },
   "keywords": [
