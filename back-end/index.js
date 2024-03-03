@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./routes/router");
 const mongoose = require("mongoose");
-require('dotenv').config('/.env');
+require("dotenv").config();
 
 const app = express();
 
@@ -20,10 +20,7 @@ app.use(cors(corsOptions));
 app.use("/", router);
 
 mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
