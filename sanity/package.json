@@ -34,5 +34,14 @@
     "printWidth": 100,
     "bracketSpacing": false,
     "singleQuote": true
+  },
+  "sanity": {
+    "root": true,
+    "project": {
+      "name": "auto-sales"
+    },
+    "api": {
+      "projectId": "seu-id-do-projeto-aqui"
+    }
   }
 }
