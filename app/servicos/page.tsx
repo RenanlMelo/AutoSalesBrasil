@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { client } from "../lib/sanity";
 import { imageProduct } from "../interface";
-import Footer from "@/components/Footer";
-import ServicosText from "@/components/ServicosText";
+import Footer from "@/app/components/Footer";
+import ServicosText from "@/app/components/ServicosText";
 
 async function getData(): Promise<imageProduct> {
   const query = `*[_type == "product"][0] {

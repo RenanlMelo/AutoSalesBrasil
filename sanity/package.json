@@ -38,10 +38,10 @@
   "sanity": {
     "root": true,
     "project": {
-      "name": "auto-sales"
+      "name": "auto-sales-brasil"
     },
     "api": {
-      "projectId": "seu-id-do-projeto-aqui"
+      "projectId": "3pvnr3or"
     }
   }
 }

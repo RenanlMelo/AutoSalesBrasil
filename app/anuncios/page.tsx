@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { simplifiedProduct } from "../interface";
 import { client } from "../lib/sanity";
-import Footer from "@/components/Footer";
+import Footer from "@/app/components/Footer";
 
 async function getData() {
   const query = `*[_type == "product"] {

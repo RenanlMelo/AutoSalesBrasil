@@ -1,7 +1,7 @@
-import About from "@/components/About";
-import Newest from "@/components/Newest";
-import Footer from "@/components/Footer";
-import Team from "@/components/Team";
+import About from "@/app/components/About";
+import Newest from "@/app/components/Newest";
+import Footer from "@/app/components/Footer";
+import Team from "@/app/components/Team";
 
 export default function Home() {
   return (
