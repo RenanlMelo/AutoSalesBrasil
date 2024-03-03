@@ -1,6 +1,6 @@
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
-import ImageGallery from "@/components/ImageGallery";
+import ImageGallery from "@/app/components/ImageGallery";
 import "./product.css";
 
 async function getData(slug: string) {
