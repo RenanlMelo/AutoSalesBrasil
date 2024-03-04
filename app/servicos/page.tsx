@@ -28,16 +28,12 @@ export default async function ServicosPage() {
 
   return (
     <>
-      <div className=" md:relative">
-        <Image
-          src={imageProduct.imageUrl.url}
-          alt="Product image"
-          className="object-cover h-full w-full z-0"
-          width={1920}
-          height={1080}
-        />
+      <div
+        className="relative bg-fixed w-full h-[764px] md:h-[500px] lg:h-[1024px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${imageProduct.imageUrl.url})` }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-80" />
-        
+
         <ServicosText />
       </div>
       <Footer />

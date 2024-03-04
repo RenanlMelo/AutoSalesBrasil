@@ -54,8 +54,8 @@ export default function ServicosText() {
           <div className="fixed bg-black opacity-50 inset-0 z-[60]" />
         )}
 
-        <div className="flex flex-col items-center justify-center z-50 h-full top-0 mx-16 lg:mx-32 relative">
-          <div className="flex flex-col items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0">
+        <div className="flex flex-col items-center justify-center z-50 h-full top-0 mx-16 lg:mx-32 relative gap-y-10">
+          <div className="flex flex-col items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
             <p className="text-slate-300 text-2xl lg:text-4xl border-b-2 px-2 pb-2 border-red-700 font-bold tracking-tight">
               Nossos Serviços
             </p>
@@ -63,10 +63,10 @@ export default function ServicosText() {
               Clique nos items para mais informações
             </p>
           </div>
-          <div className="flex justify-between relative flex-col md:flex-row-reverse xl:flex-col items-center md:items-end xl:items-center w-full">
+          <div className="flex justify-between relative flex-col md:flex-row-reverse xl:flex-col items-center md:items-end xl:items-center w-full gap-y-10">
             <div className="flex justify-between items-center md:items-end xl:items-center w-full md:w-1/4 lg:w-1/3 xl:w-full flex-col gap-y-10 xl:flex-row">
               <div //1
-                className="cursor-pointer text-slate-300 z-10 w-1/2 md:w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
+                className="cursor-pointer text-slate-300 z-10 w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
                 onClick={openInfo}
               >
                 <h1>Compra</h1>
@@ -80,7 +80,7 @@ export default function ServicosText() {
               </div>
 
               <div //2
-                className="cursor-pointer text-slate-300 z-10 w-1/2 md:w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
+                className="cursor-pointer text-slate-300 z-10 w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
                 onClick={openInfo2}
               >
                 <h1>Venda</h1>
@@ -94,7 +94,7 @@ export default function ServicosText() {
               </div>
 
               <div
-                className="cursor-pointer text-slate-300 z-10 w-1/2 md:w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
+                className="cursor-pointer text-slate-300 z-10 w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
                 onClick={openInfo3}
               >
                 <h1>Plano Content</h1>
@@ -109,7 +109,7 @@ export default function ServicosText() {
             </div>
             <a
               href="https://wa.me/5515992485445"
-              className="w-1/2 xl:w-auto text-lg xl:text-2xl xl:translate-x-0 xl:translate-y-[200%] bg-white/10 text-slate-300 text-center px-4 lg:px-8 py-3 lg:py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
+              className="mb-36 md:mb-0 w-auto text-lg xl:text-2xl xl:translate-x-0 xl:translate-y-[200%] bg-white/10 text-slate-300 text-center px-4 lg:px-8 py-3 lg:py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
             >
               Entre em contato conosco via whatsapp!
             </a>

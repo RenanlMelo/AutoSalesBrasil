@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const schemas = require("../models/schemas");
 
+router.use(express.json());
+
 router.post("/users", async (req, res) => {
   try {
     const { email } = req.body;
