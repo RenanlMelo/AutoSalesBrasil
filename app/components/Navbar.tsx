@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { name: "Início", href: "/" },
@@ -15,13 +16,27 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const [headerH, setHeaderH] = useState(0);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.style.overflowX = "hidden";
+  };
+
   const headerRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    if (headerRef.current) {
-      setHeaderH(headerRef.current.clientHeight);
+  useLayoutEffect(() => {
+    function updateHeaderHeight() {
+      if (headerRef.current) {
+        setHeaderH(headerRef.current.clientHeight);
+      }
     }
-  }, [headerH]);
+    window.addEventListener("resize", updateHeaderHeight);
+    updateHeaderHeight();
+
+    return () => window.removeEventListener("resize", updateHeaderHeight);
+  }, []);
 
   return (
     <header ref={headerRef} className="py-4 shadow-2xl z-50 bg-[#f8f8ff]">
@@ -45,7 +60,10 @@ const Navbar = () => {
             <span className="w-2/3 mt-2 bg-[#0B0227] h-px" />
           </div>
         </Link>
-        <nav className="hidden gap-8 2xl:gap-12 lg:flex text-[#0B0227]">
+        <nav
+          style={{ top: `${headerH}px` }}
+          className={`gap-8 2xl:gap-12 text-[#0B0227] hidden lg:flex`}
+        >
           {links.map((link, idx) => (
             <div key={idx}>
               {pathname === link.href ? (
@@ -69,7 +87,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="flex aspect-square lg:hidden">
+        <div className="flex aspect-square lg:hidden" onClick={toggleMenu}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -87,6 +105,40 @@ const Navbar = () => {
             <line x1="4" x2="20" y1="18" y2="18" />
           </svg>
         </div>
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              style={{ top: `${headerH}px` }}
+              className="absolute right-0 z-[60] bg-[#111] p-12 flex flex-col gap-y-6 justify-center items-center"
+              initial={{ x: 200 }}
+              animate={{ x: 0 }}
+              exit={{ x: 200 }}
+              transition={{ duration: .5 }}
+            >
+              {links.map((link, idx) => (
+                <div key={idx}>
+                  {pathname === link.href ? (
+                    <Link
+                      href={link.href}
+                      passHref
+                      className="text-xl xl:text-2xl text-red-700 font-bold"
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      passHref
+                      className="text-xl xl:text-2xl transition duration-100 text-[#bbb]"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

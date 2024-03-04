@@ -49,44 +49,71 @@ export default function ServicosText() {
 
   return (
     <>
-      <div className="absolute top-0 h-screen w-full">
+      <div className="absolute top-0 w-full h-full">
         {(showText || showText2 || showText3) && (
-            <div className="fixed bg-black opacity-50 inset-0 z-[60]" />
-          )}
+          <div className="fixed bg-black opacity-50 inset-0 z-[60]" />
+        )}
 
-        <div className="flex flex-col items-center justify-center z-50 absolute w-full h-screen top-0">
-          <div className="flex justify-evenly w-full">
-            <div //1
-              className="cursor-pointer text-slate-300 z-10 w-1/4 text-3xl font-bold text-center p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
-              onClick={openInfo}
-            >
-              <h1>Compra</h1>
-              <Image className="w-16" alt="Compra" src="./car4.png" />
-            </div>
-
-            <div //2
-              className="cursor-pointer text-slate-300 z-10 w-1/4 text-3xl font-bold text-center p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
-              onClick={openInfo2}
-            >
-              <h1>Venda</h1>
-              <Image className="w-20" alt="Venda" src="./sell.png" />
-            </div>
-
-            <div
-              className="cursor-pointer text-slate-300 z-10 w-1/4 text-3xl font-bold text-center p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
-              onClick={openInfo3}
-            >
-              <h1>Plano Content</h1>
-              <Image className="w-16" alt="Plano Content" src="./plan2.png" />
-            </div>
+        <div className="flex flex-col items-center justify-center z-50 h-full top-0 mx-16 lg:mx-32 relative">
+          <div className="flex flex-col items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0">
+            <p className="text-slate-300 text-2xl lg:text-4xl border-b-2 px-2 pb-2 border-red-700 font-bold tracking-tight">
+              Nossos Serviços
+            </p>
+            <p className="text-slate-300 font-extralight text-base lg:text-lg">
+              Clique nos items para mais informações
+            </p>
           </div>
+          <div className="flex justify-between relative flex-col md:flex-row-reverse xl:flex-col items-center md:items-end xl:items-center w-full">
+            <div className="flex justify-between items-center md:items-end xl:items-center w-full md:w-1/4 lg:w-1/3 xl:w-full flex-col gap-y-10 xl:flex-row">
+              <div //1
+                className="cursor-pointer text-slate-300 z-10 w-1/2 md:w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
+                onClick={openInfo}
+              >
+                <h1>Compra</h1>
+                <Image
+                  className="hidden lg:block w-12 lg:w-16"
+                  alt="Compra"
+                  width={100}
+                  height={100}
+                  src="/car.png"
+                />
+              </div>
 
-          <a
-            href="https://wa.me/5515992485445"
-            className="w-1/3 absolute bottom-24 text-xl bg-white/10 text-slate-300 text-center px-8 py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
-          >
-            Entre em contato conosco via whatsapp!
-          </a>
+              <div //2
+                className="cursor-pointer text-slate-300 z-10 w-1/2 md:w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
+                onClick={openInfo2}
+              >
+                <h1>Venda</h1>
+                <Image
+                  className="hidden lg:block w-14 lg:w-20"
+                  alt="Venda"
+                  width={100}
+                  height={100}
+                  src="/sell.png"
+                />
+              </div>
+
+              <div
+                className="cursor-pointer text-slate-300 z-10 w-1/2 md:w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
+                onClick={openInfo3}
+              >
+                <h1>Plano Content</h1>
+                <Image
+                  className="hidden lg:block w-12 lg:w-16"
+                  alt="Plano Content"
+                  width={100}
+                  height={100}
+                  src="/plan.png"
+                />
+              </div>
+            </div>
+            <a
+              href="https://wa.me/5515992485445"
+              className="w-1/2 xl:w-auto text-lg xl:text-2xl xl:translate-x-0 xl:translate-y-[200%] bg-white/10 text-slate-300 text-center px-4 lg:px-8 py-3 lg:py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
+            >
+              Entre em contato conosco via whatsapp!
+            </a>
+          </div>
         </div>
       </div>
 
@@ -244,7 +271,9 @@ export default function ServicosText() {
                   transition={{ delay: 0.3 }}
                   className="w-full text-center mt-4"
                 >
-                  Entre em contato pelo botão <strong className="font-bold">abaixo</strong> para podermos lhe ajudar.
+                  Entre em contato pelo botão{" "}
+                  <strong className="font-bold">abaixo</strong> para podermos
+                  lhe ajudar.
                 </motion.p>
               </motion.ul>
             </motion.div>
