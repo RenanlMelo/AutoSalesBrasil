@@ -7,7 +7,7 @@
     "backend": "cd back-end && nodemon back-end/index.js",
     "sanity": "cd sanity && npm run build && npm run dev",
     "start": "next start",
-    "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run start\"",
+    "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run start\" \"npm run build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
