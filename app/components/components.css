@@ -3,7 +3,7 @@
   --swiper-pagination-color: #eee;
 }
 
-.swiper-container .swiper-notification{
+.swiper-container .swiper-notification {
   display: none;
 }
 
@@ -123,8 +123,8 @@
   color: #25d366;
 }
 
-.social-link p::after{
-  content: '';
+.social-link p::after {
+  content: "";
   display: block;
   height: 2px;
   background-color: #f271a2;
@@ -133,8 +133,8 @@
   transition: transform 0.3s ease;
 }
 
-.phone-link p::after{
-  content: '';
+.phone-link p::after {
+  content: "";
   display: block;
   height: 2px;
   background-color: #25d366;
@@ -146,4 +146,27 @@
 .social-link:hover p::after,
 .phone-link:hover p::after {
   transform: scaleX(1);
+}
+
+.filter .text-filter::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #ddd;
+  transform: scale(0%);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.filter:hover .text-filter::after {
+  transform: scaleX(1);
+}
+
+.filter .svg-filter {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.filter:hover .svg-filter {
+  transform: rotate(0deg);
 }

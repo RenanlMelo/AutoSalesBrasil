@@ -88,6 +88,7 @@ const config = {
         sidebar: "inset 0 40px 20px -24px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .3)",
         sidebaritems: "0 0 20px -10px rgba(0,0,0,1)",
         line: "0 0 10px 1px rgba(166, 0, 255, .6)",
+        socMed: "0 0 10px 2px rgba(0, 0, 0, .4)",
       },
       fontFamily: {
         poppins: ['Poppins'],

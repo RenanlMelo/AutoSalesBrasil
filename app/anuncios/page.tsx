@@ -3,6 +3,8 @@ import Image from "next/image";
 import { simplifiedProduct } from "../interface";
 import { client } from "../lib/sanity";
 import Footer from "@/app/components/Footer";
+import AnunciosImages from "../components/AnunciosImages";
+import "../components/components.css";
 
 async function getData() {
   const query = `*[_type == "product"] {
@@ -14,7 +16,7 @@ async function getData() {
     "imageUrl": imagens[0].asset->url,
 }`;
 
-  const data = await client .fetch(query);
+  const data = await client.fetch(query);
 
   return data;
 }
@@ -22,18 +24,27 @@ async function getData() {
 export default async function anunciosPage() {
   const data: simplifiedProduct[] = await getData();
 
-  const formatPrice = (price: number) => {
-    return price.toLocaleString("pr-BR", {
-      style: "currency",
-      currency: "BRL",
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    });
-  };
-
   return (
     <>
       <div className="bg-[#f8f8ff]">
+        <div className="filter left-0 top-40 text-center fixed bg-[#0B0227] rounded-r-2xl p-2 z-[90]">
+          <p className="text-filter text-lg text-zinc-200 font-semibold tracking-wider">Filtros</p>
+          <svg
+            width="70px"
+            height="70px"
+            viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#ddd"
+            className="svg-filter rounded-t-2xl p-2"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.5 2h-1v5h1V2zm6.1 5H6.4L6 6.45v-1L6.4 5h3.2l.4.5v1l-.4.5zm-5 3H1.4L1 9.5v-1l.4-.5h3.2l.4.5v1l-.4.5zm3.9-8h-1v2h1V2zm-1 6h1v6h-1V8zm-4 3h-1v3h1v-3zm7.9 0h3.19l.4-.5v-.95l-.4-.5H11.4l-.4.5v.95l.4.5zm2.1-9h-1v6h1V2zm-1 10h1v2h-1v-2z"
+            />
+          </svg>
+        </div>
+
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-full lg:px-24 shadow-carousel">
           <div className="flex justify-between items-center">
             <h2 className="text-4xl border-b-2 px-2 pb-2 mb-6 border-red-700 font-bold tracking-tight text-[#505050]">
@@ -41,39 +52,7 @@ export default async function anunciosPage() {
             </h2>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8">
-            {data.map((product) => (
-              <div key={product._id} className="group-relative overflow-hidden shadow-anuncios rounded-lg">
-                <div className="aspect-[1.7/1] w-full overflow-hidden bg-gray-200 group-hover:opacity-75 lg:h-80">
-                  <Link href={`/product/${product.slug}`}>
-                    <Image
-                      src={product.imageUrl}
-                      alt="Product image"
-                      className="w-full h-full object-cover lg:h-full lg:w-full scale-100 hover:scale-110 duration-500 ease-in-out"
-                      width={400}
-                      height={350}
-                    />
-                  </Link>
-                </div>
-
-                <div className="mt-4 pb-2 flex justify-between">
-                  <div className="px-8 pt-4 pb-6">
-                    <h3 className="text-lg text-gray-700">
-                      <Link href={`/product/${product.slug}`}>
-                        {product.modelo}
-                      </Link>
-                    </h3>
-                    <p className="mt-1 text-md text-gray-500">
-                      {product.categoria}
-                    </p>
-                  </div>
-                  <p className="text-lg font-medium pr-8 pt-4 text-gray-900">
-                    {formatPrice(product.preco)}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <AnunciosImages products={data} />
         </div>
       </div>
       <Footer />

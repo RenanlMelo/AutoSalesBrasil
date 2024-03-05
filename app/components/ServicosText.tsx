@@ -54,7 +54,7 @@ export default function ServicosText() {
           <div className="fixed bg-black opacity-50 inset-0 z-[60]" />
         )}
 
-        <div className="flex flex-col items-center justify-center z-50 h-full top-0 mx-16 lg:mx-32 relative gap-y-10">
+        <div className="flex flex-col items-center justify-center z-50 h-full mt-10 md:mt-0 mx-16 lg:mx-32 relative gap-y-10">
           <div className="flex flex-col items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
             <p className="text-slate-300 text-2xl lg:text-4xl border-b-2 px-2 pb-2 border-red-700 font-bold tracking-tight">
               Nossos Serviços

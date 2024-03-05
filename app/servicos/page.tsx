@@ -29,7 +29,7 @@ export default async function ServicosPage() {
   return (
     <>
       <div
-        className="relative bg-fixed w-full h-[764px] md:h-[500px] lg:h-[1024px] bg-cover bg-center"
+        className="relative bg-fixed w-full h-[624px] md:h-[500px] lg:h-[1024px] bg-cover bg-center"
         style={{ backgroundImage: `url(${imageProduct.imageUrl.url})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-80" />

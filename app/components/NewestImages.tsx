@@ -27,13 +27,6 @@ export default function NewestImages({ products }: iAppProps) {
     });
   };
 
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-  };
-
   const [loading, setLoading] = useState<string | null>(null);
 
   const handleImageClick = (productId: string) => {

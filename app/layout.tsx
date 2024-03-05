@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/Navbar";
+import { SocialMedia } from "./components/SocialMedia";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body style={{ background: "#f8f8ff", fontFamily: "poppins" }} className={inter.className}>
         <style></style>
         <Navbar />
+        <SocialMedia />
         {children}
       </body>
     </html>
