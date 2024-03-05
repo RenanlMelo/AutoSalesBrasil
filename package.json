@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "backend": "cd back-end && nodemon back-end/index.js",
-    "sanity": "cd sanity && npm run build",
-    "build": "next build",
-    "build-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run build\"",
+    "sanity": "cd sanity && npm run start",
+    "start": "next start",
+    "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

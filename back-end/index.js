@@ -2,19 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const router = require("./routes/router");
-const mongoose = require("/mongoose");
-import path from 'path';
+const mongoose = require("mongoose");
 require("dotenv").config()
 
-const __dirname = path.resolve();
-
 const app = express();
-
-app.use(express.static(path.join(__dirname, '/client/dist')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'app', 'dist', 'page.tsx'));
-});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
