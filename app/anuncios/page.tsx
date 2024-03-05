@@ -47,7 +47,7 @@ export default async function anunciosPage() {
 
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-full lg:px-24 shadow-carousel">
           <div className="flex justify-between items-center">
-            <h2 className="text-4xl border-b-2 px-2 pb-2 mb-6 border-red-700 font-bold tracking-tight text-[#505050]">
+            <h2 className="text-4xl border-b-2 px-2 pb-2 ml-8 mb-6 border-red-700 font-bold tracking-tight text-[#505050]">
               Carros Disponíveis
             </h2>
           </div>

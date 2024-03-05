@@ -4,7 +4,7 @@ import React from "react";
 export function SocialMedia() {
   return (
     <>
-      <div className="z-[100] bg-[#0B0227] fixed right-0 bottom-24 flex flex-col justify-evenly items-center rounded-l-2xl gap-y-1 shadow-socMed">
+      <div className="z-[100] bg-[#0B0227] fixed right-0 bottom-24 flex flex-col justify-evenly items-center rounded-l-xl gap-y-1 shadow-socMed">
         <a
           href="https://www.instagram.com/autosalesbrasil/"
           className="social-link flex justify-center items-center hover:text-[#150447]"
