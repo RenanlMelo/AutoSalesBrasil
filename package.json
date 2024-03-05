@@ -4,15 +4,14 @@
   "private": true,
   "scripts": {
     "backend": "cd back-end && nodemon back-end/index.js",
-    "sanity": "cd sanity && npm run dev",
-    "dev": "next dev",
-    "dev-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run dev\"",
+    "sanity": "cd sanity && npm run build",
+    "build": "next build",
+    "build-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run build\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "sanity"
   ],
-  "proxy": "https://localhost:4000",
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.30.1",
