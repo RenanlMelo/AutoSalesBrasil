@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "next build",
     "backend": "cd back-end && nodemon back-end/index.js",
-    "sanity": "cd sanity && npm run build && npm run start",
+    "sanity": "cd sanity && npm run build && npm run dev",
     "start": "next start",
     "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
