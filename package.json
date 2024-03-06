@@ -5,7 +5,7 @@
   "scripts": {
     "next": "next build && next lint",
     "lint": "eslint ./src/**/*.js ./src/**/*.jsx", 
-    "backend": "cd back-end && nodemon back-end/index.js",
+    "backend": "cd back-end && npm run dev",
     "sanity": "cd sanity && npm run build && npm run dev",
     "dev": "next dev",
     "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run dev\"",
