@@ -8,7 +8,7 @@
     "backend": "cd back-end && npm run start",
     "sanity": "cd sanity && npm run build && npm run dev",
     "dev": "next dev",
-    "start-all": "concurrently \"npm run sanity\" \"npm run dev\"",
+    "start-all": "concurrently \"npm run backend\" \"npm run dev\"",
     "test": "jest" 
   },
   "keywords": [
