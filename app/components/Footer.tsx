@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import Image from "next/image";
+import "./components.css";
 
 export default function Footer() {
   const [show, setShow] = useState(false);
@@ -39,14 +40,14 @@ export default function Footer() {
 
     try {
       const checkEmailResponse = await axios.post(
-        "http://localhost:4000/users/check-email",
+        "http://localhost:9001/users/check-email",
         {
           email,
         }
       );
 
       if (checkEmailResponse.status === 200) {
-        const response = await axios.post("http://localhost:4000/users", {
+        const response = await axios.post("http://localhost:9001/users", {
           email,
         });
 
@@ -59,7 +60,7 @@ export default function Footer() {
       }
     } catch (error) {
       console.log(error);
-      setSubscribeRes('Esse E-mail já está cadastrado');
+      setSubscribeRes('Erro de conexão com o sistema');
       setTimeout(() => {
         setSubscribeRes('');
       }, 3000);
@@ -74,14 +75,14 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-[#090114] w-full flex flex-col-reverse lg:flex-row justify-between items-center bg-center px-16 lg:px-28 pt-24 lg:pt-32 relative"
+      className="bg-[#040407] w-full flex flex-col-reverse lg:flex-row justify-between items-center bg-center px-16 lg:px-28 pt-24 lg:pt-32 relative"
     >
       <Image
         src="arrow.svg"
         alt="Retornar ao topo do site"
         width={50}
         height={50}
-        className="bg-zinc-600 cursor-pointer rounded-full p-2 w-16 md:w-20 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 hover:bg-zinc-700/80 scale-[85%] hover:scale-100 duration-200"
+        className="bg-zinc-600 cursor-pointer rounded-full p-2 w-16 md:w-20 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180 hover:bg-zinc-700/80 scale-[85%] hover:scale-100 duration-200  z-[100]"
         onMouseOver={showMessage}
         onMouseLeave={hideMessage}
         onClick={scrollToTop}
@@ -102,13 +103,13 @@ export default function Footer() {
       <div className="w-full h-full flex flex-col">
         <div className="flex justify-between flex-col lg:flex-row gap-x-12">
           <div className="mb-12 lg:mb-0">
-            <span className="text-lg md:text-2xl text-slate-300 ">
+            <span className="text-lg md:text-2xl text-zinc-400 ">
               Entre em contato conosco via{" "}
               <strong className="text-[#25D366]">Whatsapp</strong> e anuncie
               imediatamente!
             </span>
             <div className="flex flex-col items-center justify-center h-full lg:max-w-md">
-              <p className="text-slate-200 mt-16 lg:mt-0 md:text-justify font-light mb-3 text-sm md:text-base">
+              <p className="text-zinc-400 mt-16 lg:mt-0 md:text-justify font-light mb-3 text-sm md:text-base">
                 Deseja receber conteúdos exclusivos e novos anúncios? Insira seu
                 E-mail abaixo!
               </p>
@@ -118,12 +119,12 @@ export default function Footer() {
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="py-2 px-4 w-full my-2 rounded-lg text-zinc-300 bg-zinc-800 focus:outline-none focus:ring-[2px] focus:ring-slate-600"
+                  className="py-2 px-4 w-full my-2 rounded-lg text-zinc-400 bg-zinc-800 focus:outline-none focus:ring-[2px] focus:ring-slate-600"
                 />
                 <button
                   type="submit"
                   onClick={handleButtonClick}
-                  className="bg-indigo-900 w-full cursor-pointer text-slate-300 text-md md:text-lg font-semibold p-2 rounded-lg scale-100 hover:scale-105 hover:bg-indigo-950 duration-200"
+                  className="bg-indigo-900 w-full cursor-pointer text-zinc-400 text-md md:text-lg font-semibold p-2 rounded-lg scale-100 hover:scale-105 hover:bg-indigo-950 duration-200"
                 >
                   Enviar
                 </button>
@@ -138,7 +139,7 @@ export default function Footer() {
 
           <div className="flex flex-col-reverse justify-between lg:justify-end  items-start h-full w-full lg:w-auto gap-y-10">
             <div className="mr-0 xl:mr-16 h-full">
-              <p className="text-md md:text-xl text-slate-200 mb-2 text-center">
+              <p className="text-md md:text-xl text-zinc-300 mb-2 text-center">
                 Horário de atendimento
               </p>
               <p className="text-sm md:text-md text-zinc-400 whitespace-nowrap">
@@ -150,7 +151,7 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col justify-center items-start xl:items-center h-full">
-              <p className="text-lg md:text-xl text-slate-200 mb-3">
+              <p className="text-lg md:text-xl text-zinc-300 mb-3">
                 Redes Sociais
               </p>
               <a
@@ -158,7 +159,7 @@ export default function Footer() {
                 className="social-link flex justify-center items-center hover:text-[#150447]"
               >
                 <svg
-                  fill="#eee"
+                  fill="#ccc"
                   width="60px"
                   height="60px"
                   viewBox="0 0 32 32"
@@ -179,7 +180,7 @@ export default function Footer() {
                 href="https://wa.me/5515992485445"
               >
                 <svg
-                  fill="#eee"
+                  fill="#ccc"
                   width="60px"
                   height="60px"
                   viewBox="0 0 32 32"
@@ -197,18 +198,18 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className=" text-2xl text-zinc-200 border-t border-zinc-600 py-8 mt-10 md:mt-20 w-full flex flex-col md:flex-row gap-y-6 md:gap-y-0 justify-center items-center gap-x-6">
+        <div className=" text-2xl text-zinc-400 border-t border-zinc-600 py-8 mt-10 md:mt-20 w-full flex flex-col md:flex-row gap-y-6 md:gap-y-0 justify-center items-center gap-x-6">
           <Image
-            src="/logo.png"
+            src="/logo3.png"
             alt="logo"
             width={120}
             height={120}
             className="w-24 rounded-full shadow-logoFooter font-krona"
           />
           <div className="flex flex-col items-center">
-            <p className="font-semibold text-lg md:text-2xl">
+            <span className="name font-semibold text-lg md:text-2xl text-zinc-200">
               Auto Sales Brasil
-            </p>
+            </span>
             <span className="w-full bg-zinc-600 h-px shadow-line" />
             <span className="w-2/3 mt-2 bg-zinc-600 h-px shadow-line" />
           </div>

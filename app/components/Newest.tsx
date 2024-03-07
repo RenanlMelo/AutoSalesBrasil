@@ -23,14 +23,14 @@ export default async function Newest() {
   const products: simplifiedProduct[] = await getData();
 
   return (
-    <div className="bg-[#f8f8ff]">
+    <div className="bg-[#100C12] mt-32">
       <div className="mx-auto py-16 px-6 md:px-16 sm:py-24 lg:px-24 shadow-carousel">
         <div className="block md:flex justify-between items-center relative">
-          <h2 className="text-2xl md:text-4xl text-center md:text-left border-b-2 px-2 pb-2 mb-6 border-red-700 font-bold tracking-tight text-[#505050]">
+          <h2 className="text-2xl md:text-4xl text-center md:text-left border-b-2 px-2 pb-2 mb-6 border-[#006039] font-bold tracking-tight text-[#c8c8cc]">
             Destaques
           </h2>
           <Link
-            className="text-red-700 text-md md:text-xl text-right md:static absolute right-0 hover:underline"
+            className="text-[#1eab72] text-md md:text-xl text-right md:static absolute right-0 hover:underline"
             href="/anuncios"
           >
             Veja todos

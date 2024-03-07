@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "next": "next build && next lint",
     "lint": "eslint ./src/**/*.js ./src/**/*.jsx", 
     "backend": "cd back-end && npm run start",
-    "sanity": "cd sanity && npm run build && npm run dev",
-    "dev": "next dev",
-    "start-all": "concurrently \"npm run backend\" \"npm run dev\"",
+    "sanity": "cd sanity && npm run dev",
+    "dev": "next build && next lint && next dev",
+    "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run dev\"",
     "test": "jest" 
   },
   "keywords": [

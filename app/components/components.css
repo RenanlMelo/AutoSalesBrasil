@@ -22,13 +22,13 @@
   color: #000;
   margin: 0 4px;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(40, 40, 40, 1);
   cursor: pointer;
 }
 
 .swiper-pagination-bullet-active {
   color: #eee;
-  background: #1b4d83;
+  background: #006039;
   transform: scale(0.1) 0.5s;
   cursor: pointer;
 }
@@ -152,7 +152,7 @@
   content: "";
   display: block;
   height: 2px;
-  background-color: #ddd;
+  background-color: #393942;
   transform: scale(0%);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -169,4 +169,8 @@
 
 .filter:hover .svg-filter {
   transform: rotate(0deg);
+}
+
+.name {
+  text-shadow: 0 0 10px #25d36593, 0 0 40px #25d36593, 0 0 100px #25d36593;
 }

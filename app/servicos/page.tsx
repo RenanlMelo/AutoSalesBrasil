@@ -3,6 +3,7 @@ import { client } from "../lib/sanity";
 import { imageProduct } from "../interface";
 import Footer from "@/app/components/Footer";
 import ServicosText from "@/app/components/ServicosText";
+import Navbar from "../components/Navbar";
 
 async function getData(): Promise<imageProduct> {
   const query = `*[_type == "product"][0] {
@@ -28,6 +29,7 @@ export default async function ServicosPage() {
 
   return (
     <>
+    <Navbar isFixed={false} />
       <div
         className="relative bg-fixed w-full h-[624px] md:h-[500px] lg:h-[1024px] bg-cover bg-center"
         style={{ backgroundImage: `url(${imageProduct.imageUrl.url})` }}

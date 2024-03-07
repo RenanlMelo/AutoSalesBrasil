@@ -53,35 +53,35 @@ export default function NewestImages({ products }: iAppProps) {
             key={product._id}
             className="my-10 shadow-anuncios rounded-lg"
           >
-            <div className="shadow-anuncios rounded-lg">
+            <div className="shadow-anuncios rounded-lg bg-zinc-900">
               <Link href={`/product/${product.slug}`}>
                 <div
                   onClick={() => handleImageClick(product._id)}
-                  className="aspect-video overflow-hidden flex justify-center items-center w-full  group-hover:opacity-75 relative"
+                  className="aspect-video  overflow-hidden flex justify-center items-center w-full group-hover:opacity-75 relative"
                 >
                   {loading === product._id && (
                     <div className="bg-black/60 z-[100] w-full h-full absolute flex justify-center items-center">
-                      <span className="w-16 h-16 block bg-transparent border-transparent border-2 border-t-slate-200 rounded-[50%] animate-loading"></span>
+                      <span className="w-16 h-16 block bg-transparent border-transparent border-2 border-t-zinc-200 rounded-[50%] animate-loading"></span>
                     </div>
                   )}
                   <Image
                     src={product.imageUrl}
                     alt="Product image"
-                    className="object-cover scale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover"
+                    className="object-coverscale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover "
                     width={1200}
                     height={800}
                   />
                 </div>
-                <div className="mt-4 pb-6 flex justify-between">
+                <div className="mt-4 pb-6 flex justify-between rounded-lg">
                   <div className="pl-8 pt-4 pb-6">
-                    <h3 className="text-md md:text-xl text-gray-700">
+                    <h3 className="text-md md:text-xl text-gray-300">
                       {product.modelo}
                     </h3>
-                    <p className="mt-1 absolute text-md md:text-lg text-gray-500">
+                    <p className="mt-1 absolute text-md md:text-lg text-gray-400">
                       {product.categoria}
                     </p>
                   </div>
-                  <p className="text-lg md:text-xl font-medium pr-8 py-4 text-gray-900">
+                  <p className="text-lg md:text-xl font-medium pr-8 py-4 text-[#1eab72]">
                     {formatPrice(product.preco)}
                   </p>
                 </div>

@@ -26,13 +26,13 @@ export default function ImageGallery({ images }: iAppProps) {
   return (
     <>
       <div className="flex flex-col xl:col-span-3 mb-8">
-        <div className="bg-gray-100 hidden lg:block">
+        <div className="hidden lg:block">
           <Image
             src={urlFor(bigImage).url()}
             alt="Photo"
             width={1000}
             height={750}
-            className="w-full object-cover object-center aspect-video"
+            className="w-full object-cover object-center aspect-video rounded-2xl"
             onLoadingComplete={({ naturalWidth, naturalHeight }) => {
               setBigImage((prevBigImage: typeof bigImage) => ({
                 ...prevBigImage,
@@ -57,7 +57,7 @@ export default function ImageGallery({ images }: iAppProps) {
             className="carousel mt-10"
           >
             {images.map((image: any, idx: any) => (
-              <SwiperSlide key={idx} className="bg-gray-300 w-full mb-4">
+              <SwiperSlide key={idx} className="w-full mb-4">
                 <Image
                   src={urlFor(image).url()}
                   width={1530}

@@ -1,15 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { simplifiedProduct } from "../interface";
+import { simplifiedProduct } from "../../interface";
 import Link from "next/link";
 import Image from "next/image";
 
 interface iAppProps {
   products: any;
+  sort?: string;
+  updateSort?: (newSort: string) => void;
 }
 
-export default function AnunciosImages({ products }: iAppProps) {
+export default function AnunciosImages({ products, sort, updateSort }: iAppProps) {
   const formatPrice = (price: number) => {
     return price.toLocaleString("pr-BR", {
       style: "currency",
@@ -25,15 +27,25 @@ export default function AnunciosImages({ products }: iAppProps) {
     setLoading(productId);
   };
 
+  const sortProducts = () => {
+    if (sort === "HL") {
+      return products.sort((a: any, b: any) => a.preco - b.preco);
+    } else if (sort === "LH") {
+      return products.sort((a: any, b: any) => b.preco - a.preco);
+    } else {
+      return products;
+    }
+  };
+
   return (
     <>
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8">
-        {products.map((product: simplifiedProduct) => (
+      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 w-full">
+        {sortProducts().map((product: simplifiedProduct) => (
           <div
             key={product._id}
-            className="group-relative overflow-hidden shadow-anuncios rounded-lg"
+            className="group-relative overflow-hidden shadow-anuncios rounded-lg bg-zinc-900"
           >
-            <div className="aspect-[1.7/1] w-full overflow-hidden bg-gray-200 group-hover:opacity-75 lg:h-80">
+            <div className="aspect-[1.7/1] w-full overflow-hidden  group-hover:opacity-75">
               <Link href={`/product/${product.slug}`}>
                 <div
                   onClick={() => handleImageClick(product._id)}
@@ -55,14 +67,14 @@ export default function AnunciosImages({ products }: iAppProps) {
               </Link>
             </div>
 
-            <div className="mt-4 pb-2 flex justify-between">
+            <div className="mt-2 pb-2 flex justify-between">
               <div className="px-8 pt-4 pb-6">
-                <h3 className="text-lg text-gray-700">{product.modelo}</h3>
-                <p className="mt-1 text-md text-gray-500">
+                <h3 className="text-lg text-gray-300">{product.modelo}</h3>
+                <p className="mt-1 text-md text-gray-400">
                   {product.categoria}
                 </p>
               </div>
-              <p className="text-lg font-medium pr-8 pt-4 text-gray-900">
+              <p className="text-lg font-medium pr-8 pt-4 text-[#1eab72]">
                 {formatPrice(product.preco)}
               </p>
             </div>
