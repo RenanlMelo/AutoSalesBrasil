@@ -29,9 +29,9 @@ export default function AnunciosImages({ products, sort, updateSort }: iAppProps
 
   const sortProducts = () => {
     if (sort === "HL") {
-      return products.sort((a: any, b: any) => a.preco - b.preco);
+      return products.sort((a: any, b: any) => b.preco - a.preco );
     } else if (sort === "LH") {
-      return products.sort((a: any, b: any) => b.preco - a.preco);
+      return products.sort((a: any, b: any) => a.preco - b.preco);
     } else {
       return products;
     }
