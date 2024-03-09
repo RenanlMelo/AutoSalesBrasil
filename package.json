@@ -7,7 +7,7 @@
     "lint": "eslint ./src/**/*.js ./src/**/*.jsx", 
     "backend": "cd back-end && npm run start && npm run dev && npm run build",
     "sanity": "cd sanity && npm run dev && npm run build",
-    "dev": " && next lint && next dev",
+    "dev": "next lint && next dev",
     "start-all": "concurrently \"npm run backend\" \"npm run sanity\" \"npm run dev\"",
     "test": "jest" 
   },
