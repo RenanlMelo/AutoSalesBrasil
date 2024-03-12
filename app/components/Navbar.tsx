@@ -41,7 +41,7 @@ const Navbar = ({ isFixed }: any) => {
   return (
     <header
       ref={headerRef}
-      className={`py-4 shadow-header z-50 bg-[#080810] border-b border-zinc-700 ${
+      className={`py-4 shadow-header z-50 bg-[#121212] border-b border-zinc-700 ${
         isFixed ? "fixed top-0 w-full" : ""
       }`}
     >
@@ -75,7 +75,7 @@ const Navbar = ({ isFixed }: any) => {
                 <Link
                   href={link.href}
                   passHref
-                  className="text-xl xl:text-2xl text-[#006039] border-b-2 pb-1.5 border-[#006039] font-bold hover:text-[#bbb] hover:border-[#bbb] ease-in-out duration-300"
+                  className="text-xl xl:text-2xl text-[#ba3939] border-b-2 pb-1.5 border-[#ba3939bc] font-bold hover:text-[#909090] hover:border-[#909090] ease-in-out duration-300"
                 >
                   {link.name}
                 </Link>
@@ -83,7 +83,7 @@ const Navbar = ({ isFixed }: any) => {
                 <Link
                   href={link.href}
                   passHref
-                  className="text-xl xl:text-2xl transition duration-100 text-[#bbb] after:block after:h-[2px] after:bg-[#bbb] after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center after:translate-y-1"
+                  className="text-xl xl:text-2xl transition duration-100 text-[#909090] after:block after:h-[2px] after:bg-[#909090] after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center after:translate-y-1"
                 >
                   {link.name}
                 </Link>

@@ -28,7 +28,7 @@
 
 .swiper-pagination-bullet-active {
   color: #eee;
-  background: #006039;
+  background: #ba3939bc;
   transform: scale(0.1) 0.5s;
   cursor: pointer;
 }
@@ -172,5 +172,5 @@
 }
 
 .name {
-  text-shadow: 0 0 10px #25d36593, 0 0 40px #25d36593, 0 0 100px #25d36593;
+  text-shadow: 0 0 10px #ba3939bc , 0 0 20px #ba3939bc;
 }

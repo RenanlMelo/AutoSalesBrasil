@@ -81,7 +81,7 @@ export default function NewestImages({ products }: iAppProps) {
                       {product.categoria}
                     </p>
                   </div>
-                  <p className="text-lg md:text-xl font-medium pr-8 py-4 text-[#1eab72]">
+                  <p className="text-lg md:text-xl font-medium pr-8 py-4 text-gray-400">
                     {formatPrice(product.preco)}
                   </p>
                 </div>

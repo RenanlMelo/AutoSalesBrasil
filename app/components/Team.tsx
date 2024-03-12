@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Team() {
   return (
-    <div className="w-full flex flex-col justify-center text-[#ddd] items-center bg-[#100C12] py-24 px-10">
+    <div className="w-full flex flex-col justify-center text-[#ddd] items-center bg-[#101010] py-24 px-10">
       <h1 className="text-2xl lg:text-4xl font-bold mb-8 border-b px-2 pb-2 border-slate-500 ">
         Nossa Equipe
       </h1>
@@ -16,10 +16,10 @@ export default function Team() {
             height={500}
             className="w-[200px] md:w-[270px] mx-auto mb-10 rounded-full"
           />
-          <h3 className="p-2 text-lg md:text-2xl font-bold text-[#006039]">
+          <h3 className="p-2 text-lg md:text-2xl font-bold text-[#FF0000a4]">
             Gustavo Coloniesi
           </h3>
-          <p className="p-2 text-md md:text-xl font-semibold text-[#00603ac1]">
+          <p className="p-2 text-md md:text-xl font-semibold text-[#FF000099]">
             Experiente em veículos de categoria premium
           </p>
           <p className="p-2 text-xs md:text-base text-justify indent-10 leading-7 font-light border-t border-slate-600">
@@ -42,10 +42,10 @@ export default function Team() {
             height={500}
             className="w-[200px] md:w-[270px] mx-auto mb-10 rounded-full"
           />
-          <h3 className="p-2 text-xl md:text-2xl font-bold text-[#006039]">
+          <h3 className="p-2 text-xl md:text-2xl font-bold text-[#ff0000a4]">
             Bruno Reis
           </h3>
-          <p className="p-2 text-md md:text-xl text-justify font-semibold text-[#00603ac1]">
+          <p className="p-2 text-md md:text-xl text-justify font-semibold text-[#ff000099]">
             Responsável por Finanças & Gestão.
           </p>
           <p className="p-2 text-xs md:text-base text-justify indent-10 leading-7 font-light border-t border-slate-600">

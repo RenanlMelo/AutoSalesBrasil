@@ -6,7 +6,7 @@ export default function About() {
       <div className="w-full">
         <section className="mx-auto max-w-8xl mb-32">
           <div className="mb-4 w-full h-full flex px-0 md:px-16 xl:px-32 2xl:px-60 mt-48 md:mt-32 justify-start items-center ">
-            <h1 className="mx-10 border-b-4 text-center md:text-left border-[#013822] font-light text-[#d6d6dd] text-[1.5rem] sm:text-2xl md:mb-8 md:text-[1.9rem] lg:text-4xl xl:text-4xl tracking-normal xl:tracking-tight">
+            <h1 className="mx-10 border-b-4 text-center md:text-left border-[#ba3939bc] font-light text-[#d6d6dd] text-[1.5rem] sm:text-2xl md:mb-8 md:text-[1.9rem] lg:text-4xl xl:text-4xl tracking-normal xl:tracking-tight">
               Não vendemos apenas carros, <br/>Entregamos seu sonho sobre quatro rodas
             </h1>
           </div>
@@ -45,7 +45,7 @@ export default function About() {
                 <span> </span>
                 <a
                   href="#footer"
-                  className="font-semibold text-[#c8c8cc] underline hover:text-[#1eab72]"
+                  className="font-semibold text-[#c8c8cc] underline hover:text-[#ba3939]"
                 >
                   contato
                 </a>{" "}
