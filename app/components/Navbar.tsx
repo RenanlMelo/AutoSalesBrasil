@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { name: "Início", href: "/" },
+  { name: "Sobre", href: "/sobre" },
   { name: "Serviços", href: "/servicos" },
   { name: "Anúncios", href: "/anuncios" },
 ];
@@ -41,7 +42,7 @@ const Navbar = ({ isFixed }: any) => {
   return (
     <header
       ref={headerRef}
-      className={`py-4 shadow-header z-50 bg-[#121212] border-b border-zinc-700 ${
+      className={`py-4 shadow-division z-50 bg-[#121212] border-b border-zinc-700 ${
         isFixed ? "fixed top-0 w-full" : ""
       }`}
     >
@@ -58,16 +59,16 @@ const Navbar = ({ isFixed }: any) => {
             className="w-16 rounded-full aspect-square xl:w-24 md:w-20"
           />
           <div className="flex flex-col items-center">
-            <h1 className="text-[#c8c8cc] font-semibold text-lg md:text-2xl xl:text-3xl px-2">
+            <h1 className="text-[#8e8e8e] font-semibold text-lg md:text-2xl xl:text-3xl px-2">
               Auto Sales Brasil
             </h1>
-            <span className="w-full bg-[#d8d8dd] h-px" />
-            <span className="w-2/3 mt-2 bg-[#d8d8dd] h-px" />
+            <span className="w-full bg-[#8e8e8e] h-px" />
+            <span className="w-2/3 mt-2 bg-[#8e8e8e] h-px" />
           </div>
         </Link>
         <nav
           style={{ top: `${headerH}px` }}
-          className={`gap-8 2xl:gap-12 text-[#d8d8dd] hidden lg:flex`}
+          className={`gap-8 2xl:gap-12 text-[#8e8e8e] hidden lg:flex`}
         >
           {links.map((link, idx) => (
             <div key={idx}>
@@ -75,7 +76,7 @@ const Navbar = ({ isFixed }: any) => {
                 <Link
                   href={link.href}
                   passHref
-                  className="text-xl xl:text-2xl text-[#ba3939] border-b-2 pb-1.5 border-[#ba3939bc] font-bold hover:text-[#909090] hover:border-[#909090] ease-in-out duration-300"
+                  className="text-xl xl:text-2xl text-[#1864c7] border-b-2 pb-1.5 border-[#1864c7] font-bold hover:text-[#909090] hover:border-[#909090] ease-in-out duration-300"
                 >
                   {link.name}
                 </Link>
@@ -98,8 +99,8 @@ const Navbar = ({ isFixed }: any) => {
             width="36"
             height="36"
             viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
+            fill="#1864c7"
+            stroke="#1864c7"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -114,7 +115,7 @@ const Navbar = ({ isFixed }: any) => {
           {isMenuOpen && (
             <motion.div
               style={{ top: `${headerH}px` }}
-              className="absolute right-0 z-[60] bg-[#111] p-12 flex flex-col gap-y-6 justify-center items-center"
+              className="absolute right-0 z-[60] bg-[#101010] p-12 flex flex-col gap-y-6 justify-center items-center border-b border-l border-gray-800"
               initial={{ x: 200 }}
               animate={{ x: 0 }}
               exit={{ x: 200 }}
@@ -126,7 +127,7 @@ const Navbar = ({ isFixed }: any) => {
                     <Link
                       href={link.href}
                       passHref
-                      className="text-xl xl:text-2xl text-red-700 font-bold"
+                      className="text-xl xl:text-2xl text-[#1864c7] font-bold"
                     >
                       {link.name}
                     </Link>

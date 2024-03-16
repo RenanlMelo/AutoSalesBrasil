@@ -32,9 +32,9 @@ export default function Footer() {
     const isValidEmail = /\S+@\S+\.\S+/.test(email);
     if (!isValidEmail) {
       setSubscribeRes("Por favor, insira um endereço de E-mail válido.");
-          setTimeout(() => {
-            setSubscribeRes('');
-          }, 3000);
+      setTimeout(() => {
+        setSubscribeRes("");
+      }, 3000);
       return;
     }
 
@@ -54,15 +54,15 @@ export default function Footer() {
         if (response.data.message === "Assinatura concluída com sucesso!") {
           setSubscribeRes(response.data.message);
           setTimeout(() => {
-            setSubscribeRes('');
+            setSubscribeRes("");
           }, 3000);
-        } 
+        }
       }
     } catch (error) {
       console.log(error);
-      setSubscribeRes('Erro de conexão com o sistema');
+      setSubscribeRes("Erro de conexão com o sistema");
       setTimeout(() => {
-        setSubscribeRes('');
+        setSubscribeRes("");
       }, 3000);
     }
   };
@@ -114,13 +114,16 @@ export default function Footer() {
                 E-mail abaixo!
               </p>
               <form className="w-full relative">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="py-2 px-4 w-full my-2 rounded-lg text-zinc-400 bg-zinc-800 focus:outline-none focus:ring-[2px] focus:ring-slate-600"
-                />
+                <div className="input-group realtive">
+                  <input
+                    type="email"
+                    id="inputFooter"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full mb-2 mt-6 rounded-lg text-zinc-400 bg-transparent border-zinc-500"
+                  />
+                  <label id="footerLabel">E-mail</label>
+                </div>
                 <button
                   type="submit"
                   onClick={handleButtonClick}

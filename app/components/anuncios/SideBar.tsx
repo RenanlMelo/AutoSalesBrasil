@@ -12,21 +12,22 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({
   changeHL,
   changeLH,
-  sort, 
+  sort,
   setSort,
 }) => {
-
   const handleChangeHL = () => {
-    setSort(changeHL)
-  }
-  
+    setSort(changeHL);
+  };
+
   const handleChangeLH = () => {
-    setSort(changeLH)
-  }
+    setSort(changeLH);
+  };
 
   return (
     <>
-      <div className="sidebar bg-[#100C12] w-72 h-screen z-20 fixed">
+      <div className="sidebar bg-[#090909] w-72 h-screen z-20 fixed overflow-hidden shadow-division">
+        <span className="w-[400px] h-[400px] xl:w-[700px] xl:h-[700px] rotate-45 absolute shadow-box -translate-x-1/2 translate-y-[60%] bottom-0 left-0" />
+        <span className="w-[400px] h-[400px] xl:w-[520px] xl:h-[520px] rotate-45 absolute shadow-box -translate-x-1/2 translate-y-[60%] bottom-0 left-0" />
         <div className="relative w-full h-full grid-rows-5 z-10 mt-6">
           <div className="filter text-center rounded-r-2xl p-2 flex w-full items-center justify-center gap-x-4">
             <p className="text-filter text-xl text-zinc-400 font-semibold tracking-wider">
@@ -126,9 +127,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </label>
             </div>
           </div>
-          <div>
-            
-          </div>
+          <div></div>
         </div>
       </div>
     </>

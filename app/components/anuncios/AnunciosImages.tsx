@@ -74,7 +74,7 @@ export default function AnunciosImages({ products, sort, updateSort }: iAppProps
                   {product.categoria}
                 </p>
               </div>
-              <p className="text-lg font-medium pr-8 pt-4 text-[#1eab72]">
+              <p className="text-lg font-medium pr-8 pt-4 text-gray-300">
                 {formatPrice(product.preco)}
               </p>
             </div>

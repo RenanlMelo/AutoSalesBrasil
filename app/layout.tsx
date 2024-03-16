@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ background: "#1b1b1b", fontFamily: "poppins" }} className={inter.className}>
+      <body style={{ background: "#101010", fontFamily: "poppins" }} className={inter.className}>
         <style></style>
         <SocialMedia />
         {children}

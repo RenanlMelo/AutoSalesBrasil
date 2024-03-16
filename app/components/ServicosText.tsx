@@ -56,11 +56,11 @@ export default function ServicosText() {
 
         <div className="flex flex-col items-center justify-center z-50 h-full mt-10 md:mt-0 mx-16 lg:mx-32 relative gap-y-10">
           <div className="flex flex-col items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
-            <p className="text-[#c8c8cc] text-2xl lg:text-4xl border-b-2 px-2 pb-2 border-[#006039] font-bold tracking-tight">
+            <p className="text-[#8e8e8e] text-2xl lg:text-4xl border-b-2 px-2 pb-2 border-[#1864c7] font-bold tracking-tight">
               Nossos Serviços
             </p>
-            <p className="text-zinc-300 font-extralight text-base lg:text-lg">
-              Clique nos items para mais informações
+            <p className="text-zinc-300 font-extralight text-base lg:text-lg mt-1 w-full text-center">
+              Clique nos items para mais informações!
             </p>
           </div>
           <div className="flex justify-between relative flex-col md:flex-row-reverse xl:flex-col items-center md:items-end xl:items-center w-full gap-y-10">
@@ -135,7 +135,7 @@ export default function ServicosText() {
                 alt="Fechar"
                 className="absolute cursor-pointer top-4 right-4 bg-zinc-700/70 p-2 rounded-full hover:bg-zinc-600/30 hover:scale-110 duration-200"
               />
-              <motion.ul className="text-xl text-zinc-300 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
+              <motion.ul className="text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -221,7 +221,7 @@ export default function ServicosText() {
                 alt="Fechar"
                 className="absolute cursor-pointer top-4 right-4 bg-zinc-700/70 p-2 rounded-full hover:bg-zinc-600/30 hover:scale-110 duration-200"
               />
-              <motion.ul className="text-xl text-zinc-300 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
+              <motion.ul className="text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -299,7 +299,7 @@ export default function ServicosText() {
                 alt="Fechar"
                 className="absolute cursor-pointer top-4 right-4 bg-zinc-700/70 p-2 rounded-full hover:bg-zinc-600/30 hover:scale-110 duration-200"
               />
-              <motion.ul className="text-xl text-zinc-300 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] py-10 px-20 rounded-xl max-w-5xl flex flex-col justify-center items-start text-justify">
+              <motion.ul className="text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] py-10 px-20 rounded-xl max-w-5xl flex flex-col justify-center items-start text-justify">
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -322,6 +322,16 @@ export default function ServicosText() {
                   estas imagens irão receber uma edição as tornando ainda mais
                   exclusivas e por fim serão utilizadas para o seu anúncio.
                 </motion.li>
+                <motion.p
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 100, opacity: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="w-full text-center mt-4"
+                >
+                  Entre em contato pelo botão{" "}
+                  <strong className="font-bold">abaixo</strong>, para que possamos ajudá-lo.
+                </motion.p>
               </motion.ul>
             </motion.div>
           </motion.div>

@@ -77,7 +77,7 @@ export default function NewestImages({ products }: iAppProps) {
                     <h3 className="text-md md:text-xl text-gray-300">
                       {product.modelo}
                     </h3>
-                    <p className="mt-1 absolute text-md md:text-lg text-gray-400">
+                    <p className="mt-1 absolute text-md md:text-lg text-[#8e8e8e]">
                       {product.categoria}
                     </p>
                   </div>

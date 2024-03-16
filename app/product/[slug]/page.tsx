@@ -50,7 +50,7 @@ export default async function ProductPage({
             {data.imagens && <ImageGallery images={data.imagens} />}
 
             <div className="col-span-2">
-              <div className="p-12 bg-zinc-800 rounded-lg text-zinc-300  relative">
+              <div className="p-12 bg-zinc-900 rounded-lg text-zinc-500 relative">
                 <strong className="text-md p-2">Categoria</strong>{" "}
                 <p className="text-sm p-2 pt-0 border-b border-slate-400">
                   {data.categoria}
@@ -91,10 +91,10 @@ export default async function ProductPage({
                   </span>
                   <p className="text-sm sm:text-md">{data.descricao}</p>
                 </div>
-                <p className="text-2xl p-2">{formatPrice(data.preco)}</p>
+                <p className="text-2xl p-2 text-[#25d365d0]">{formatPrice(data.preco)}</p>
                 <a
                   id="hover"
-                  className="mt-6 bg-[#006039] w-full py-8 flex flex-col justify-center items-center scale-95 hover:scale-100 duration-200  hover:text-[#25D366] hover:bg-zinc-900"
+                  className="mt-6 bg-[#006039] w-full text-zinc-300 py-8 flex flex-col justify-center items-center scale-95 hover:scale-100 duration-200  hover:text-[#25D366] hover:bg-zinc-900"
                   href="https://wa.me/5515992485445"
                 >
                   <p className="text-md sm:text-lg italic font-semibold">

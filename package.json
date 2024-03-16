@@ -5,9 +5,8 @@
   "scripts": {
     "build": "next build",
     "lint": "eslint ./src/**/*.js ./src/**/*.jsx", 
-    "sanity": "cd sanity && npm run dev && npm run build",
     "dev": "next lint && next dev",
-    "start-all": "concurrently \"npm run sanity\" \"npm run dev\"",
+    "start-all": "concurrently \"npm run dev\"",
     "test": "jest" 
   },
   "keywords": [
