@@ -52,7 +52,7 @@ const Navbar = ({ isFixed }: any) => {
           className="flex justify-center items-center gap-4 lg:gap-6"
         >
           <Image
-            src="/logo3.png"
+            src="/logo.png"
             alt="logo"
             width={100}
             height={100}

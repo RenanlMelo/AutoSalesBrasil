@@ -203,7 +203,7 @@ export default function Footer() {
         </div>
         <div className=" text-2xl text-zinc-400 border-t border-zinc-600 py-8 mt-10 md:mt-20 w-full flex flex-col md:flex-row gap-y-6 md:gap-y-0 justify-center items-center gap-x-6">
           <Image
-            src="/logo3.png"
+            src="/logo.png"
             alt="logo"
             width={120}
             height={120}

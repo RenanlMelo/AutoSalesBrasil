@@ -14,7 +14,7 @@ export default function About() {
           <div className="flex justify-center items-center sm:items-stretch flex-col lg:flex-row px-0 2xl:mx-60 bg-transparent shadow-about">
             <div className="w-full lg:bg-transparent lg:w-1/2 flex justify-center lg:justify-end border-l border-zinc-700 relative">
               <Image
-                src="/logo3.png"
+                src="/logo.png"
                 alt="logo"
                 width={1000}
                 height={1000}
