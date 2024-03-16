@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon back-end/index.js",
-    "build": "node back-end/index.js",
-    "start": "node back-end/index.js"
+    "build": "node index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
