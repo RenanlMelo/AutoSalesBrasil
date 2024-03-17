@@ -42,7 +42,7 @@ const Navbar = ({ isFixed }: any) => {
   return (
     <header
       ref={headerRef}
-      className={`py-4 shadow-division z-50 bg-[#121212] border-b border-zinc-700 ${
+      className={`py-4 shadow-division z-[110] bg-[#121212] border-b border-zinc-700 ${
         isFixed ? "fixed top-0 w-full" : ""
       }`}
     >

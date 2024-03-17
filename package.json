@@ -6,7 +6,6 @@
     "build": "next build",
     "lint": "eslint ./src/**/*.js ./src/**/*.jsx", 
     "dev": "next lint && next dev",
-    "start-all": "concurrently \"npm run dev\"",
     "test": "jest" 
   },
   "keywords": [

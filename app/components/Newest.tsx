@@ -25,10 +25,10 @@ export default async function Newest() {
   return (
     <div className="bg-[#101010] mt-32 shadow-division">
       <div className="mx-auto py-16 px-6 md:px-16 sm:py-24 lg:px-24 shadow-carousel relative overflow-hidden">
-      <span className="w-[400px] h-[400px] xl:w-[400px] xl:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 -translate-x-1/2 bottom-0 left-0" />
-        <span className="w-[400px] h-[400px] xl:w-[250px] xl:h-[250px] rotate-45 absolute shadow-box translate-y-1/2 -translate-x-1/2 bottom-0 left-0" />
-        <span className="w-[400px] h-[400px] xl:w-[250px] xl:h-[250px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
-        <span className="w-[400px] h-[400px] xl:w-[400px] xl:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
+        <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 -translate-x-1/2 bottom-0 left-0" />
+        <span className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] rotate-45 absolute shadow-box translate-y-1/2 -translate-x-1/2 bottom-0 left-0" />
+        <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
+        <span className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
         <div className="block md:flex justify-between items-center relative">
           <h2 className="text-2xl md:text-4xl text-center md:text-left border-b-2 px-2 pb-2 mb-6 border-[#1864c7] font-bold tracking-tight text-[#8e8e8e]">
             Recentes

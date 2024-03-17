@@ -8,10 +8,10 @@ export default function Team() {
         <h1 className="text-2xl lg:text-4xl font-bold mb-8 border-b px-2 pb-2 border-slate-500 ">
           Nossa Equipe
         </h1>
-        <span className="w-[400px] h-[400px] xl:w-[400px] xl:h-[400px] rotate-45 absolute shadow-box -translate-y-1/2 -translate-x-1/2 top-0 left-0" />
-        <span className="w-[400px] h-[400px] xl:w-[250px] xl:h-[250px] rotate-45 absolute shadow-box -translate-y-1/2 -translate-x-1/2 top-0 left-0" />
-        <span className="w-[400px] h-[400px] xl:w-[250px] xl:h-[250px] rotate-45 absolute shadow-box -translate-y-1/2 translate-x-1/2 top-0 right-0" />
-        <span className="w-[400px] h-[400px] xl:w-[400px] xl:h-[400px] rotate-45 absolute shadow-box -translate-y-1/2 translate-x-1/2 top-0 right-0" />
+        <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box -translate-y-1/2 -translate-x-1/2 top-0 left-0" />
+        <span className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] rotate-45 absolute shadow-box -translate-y-1/2 translate-x-1/2 top-0 right-0" />
+        <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box -translate-y-1/2 translate-x-1/2 top-0 right-0" />
+        <span className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] rotate-45 absolute shadow-box -translate-y-1/2 -translate-x-1/2 top-0 left-0" />
         <div className="grid gap-x-40 gap-y-20 w-full grid-rows-[2] grid-cols-1 xl:grid-cols-2 xl:grid-rows-1 lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl my-6">
           <div className="flex justify-start items-start text-start flex-col col-span-1 row-start-1 w-full h-fit">
             <Image
