@@ -91,7 +91,9 @@ const config = {
         box: "inset 0 0 10px 0 rgba(41, 134, 255, .5), inset 0 0 100px 0 rgba(41, 134, 255, .5)",
         division: "0 0 40px 0 rgba(0, 0, 0, 1)",
         send: "0 0 40px 0 rgba(24, 100, 199, .5)",
-        under: "0 0 50px 5px rgba(41, 134, 255, 1)"
+        under: "0 0 50px 5px rgba(41, 134, 255, 1)",
+        textr: "-5px 7px 10px 0 rgba(0, 0, 0, 1)",
+        textl: "5px 7px 10px 0 rgba(0, 0, 0, 1)",
       },
       fontFamily: {
         poppins: ['Poppins'],

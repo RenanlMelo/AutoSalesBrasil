@@ -13,17 +13,17 @@ export const Email = () => {
             Deseja receber conteúdos exclusivos e novos anúncios? Insira seu
             E-mail abaixo!
           </h1>
-          <div className="input-group relative mt-8 lg:mt-12">
+          <div className="input-group relative mt-4 sm:mt-8 lg:mt-12">
             <input
               id="inputEmail"
               type="text"
-              className="w-full rounded-lg bg-black/40 border text-base lg:text-lg text-[#8e8e8e] border-zinc-500"
+              className="w-full rounded-lg p-2 sm:p-4 bg-black/40 border text-base lg:text-lg text-[#8e8e8e] border-zinc-500"
             />
             <label id="emailLabel" className="text-[#8e8e8e]">E-mail</label>
           </div>
           <button
             type="submit"
-            className="w-full mb-3 lg:mb-0 mt-6 p-3 rounded-lg lg:bg-transparent border text-md lg:text-lg lg:text-zinc-400 lg:border-zinc-500 scale-95 lg:hover:scale-100 duration-200 lg:hover:bg-zinc-950 lg:hover:border-[#1864c7] lg:hover:text-[#1864c7] lg:hover:shadow-send bg-zinc-950 border-[#1864c7] text-[#1864c7] lg:shadow-none shadow-send"
+            className="w-full mb-3 lg:mb-0 mt-4 sm:mt-6 p-3 rounded-lg lg:bg-transparent border text-md lg:text-lg lg:text-zinc-400 lg:border-zinc-500 scale-95 lg:hover:scale-100 duration-200 lg:hover:bg-zinc-950 lg:hover:border-[#1864c7] lg:hover:text-[#1864c7] lg:hover:shadow-send bg-zinc-950 border-[#1864c7] text-[#1864c7] lg:shadow-none shadow-send"
           >
             Enviar
           </button>

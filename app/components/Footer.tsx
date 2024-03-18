@@ -120,7 +120,7 @@ export default function Footer() {
                     id="inputFooter"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full mb-2 mt-6 rounded-lg text-zinc-400 bg-transparent border-zinc-500"
+                    className="w-full mb-2 mt-6 rounded-lg text-zinc-400 bg-transparent border-zinc-500 p-2 sm:p-4"
                   />
                   <label id="footerLabel">E-mail</label>
                 </div>
@@ -153,8 +153,8 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col justify-center items-start xl:items-center h-full">
-              <p className="text-lg md:text-xl text-zinc-300 mb-3">
+            <div className="flex flex-col justify-start items-start h-full">
+              <p className="text-lg md:text-xl text-zinc-300 mb-3 w-full text-center">
                 Redes Sociais
               </p>
               <a
