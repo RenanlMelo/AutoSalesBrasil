@@ -5,7 +5,7 @@ export default async function ServicosResume() {
   return (
     <>
       <div className="w-full py-24 lg:py-32 px-10 lg:px-32">
-        <div className="w-full flex flex-col justify-center items-center relative gap-y-16 lg:gap-0">
+        <div className="w-full flex flex-col justify-evenly relative gap-y-8 lg:gap-0">
           <span className="text-2xl md:text-4xl w-full text-center md:text-left mb-10 lg:mb-20 font-bold tracking-tight text-[#8e8e8e]">
             <p className="border-b-2 border-[#1864c7] px-2 pb-2 w-fit">
               Serviços

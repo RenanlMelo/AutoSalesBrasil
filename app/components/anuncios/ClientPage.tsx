@@ -30,7 +30,7 @@ export const ClientPage: React.FC<ClientPageProps> = ({ products }) => {
   
   return (
     <>
-      <div className="bg-[#101010] mt-32">
+      <div className="bg-[#101010] lg:mt-32">
         <Sidebar
           changeHL={changeHL}
           changeLH={changeLH}
