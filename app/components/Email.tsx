@@ -9,7 +9,7 @@ export const Email = () => {
       >
         <span className="absolute inset-0 bg-black bg-opacity-60" />
         <form className="lg:w-1/3 lg:bg-black/40 lg:backdrop-blur-md rounded-xl p-8 relative lg:my-40">
-          <h1 className="text-zinc-400 text-lg lg:text-2xl">
+          <h1 className="text-zinc-400 text-base sm:text-lg lg:text-2xl">
             Deseja receber conteúdos exclusivos e novos anúncios? Insira seu
             E-mail abaixo!
           </h1>
