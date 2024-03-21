@@ -33,7 +33,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     process.exit(1); // Exit the process if failed to connect to DB
   });
 
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 9001;
 const server = app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
