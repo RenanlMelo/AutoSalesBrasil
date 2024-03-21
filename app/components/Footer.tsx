@@ -7,6 +7,8 @@ import "./components.css";
 
 export default function Footer() {
   const [show, setShow] = useState(false);
+  const [email, setEmail] = useState("");
+  const [subscribeRes, setSubscribeRes] = useState("");
 
   const showMessage = () => {
     setShow(true);
@@ -22,9 +24,6 @@ export default function Footer() {
       behavior: "smooth",
     });
   };
-
-  const [email, setEmail] = useState("");
-  const [subscribeRes, setSubscribeRes] = useState("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,9 +46,12 @@ export default function Footer() {
       );
 
       if (checkEmailResponse.status === 200) {
-        const response = await axios.post("https://autosalesbrasil-server.vercel.app/users", {
-          email,
-        });
+        const response = await axios.post(
+          "https://autosalesbrasil-server.vercel.app/users",
+          {
+            email,
+          }
+        );
 
         if (response.data.message === "Assinatura concluída com sucesso!") {
           setSubscribeRes(response.data.message);
