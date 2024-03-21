@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const allowedOrigins = ["http://example1.com", "http://example2.com"]; // Defina suas origens permitidas aqui
+const allowedOrigins = ["https://autosalesbrasil-server.vercel.app"]; // Defina suas origens permitidas aqui
 
 const corsOptions = {
   origin: function (origin, callback) {
