@@ -30,7 +30,7 @@ export default async function Newest() {
         <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
         <span className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
         <div className="block md:flex justify-between items-center relative">
-          <h1 className="text-xl lg:text-2xl 2xl:text-4xl text-center md:text-left border-b-2 px-2 pb-2 mb-6 border-[#1864c7] font-bold tracking-tight text-[#8e8e8e]">
+          <h1 className="text-xl lg:text-2xl 2xl:text-4xl text-center w-fit lg:w-full  md:text-left border-b-2 px-2 pb-2 mb-6 border-[#1864c7] font-bold tracking-tight text-[#8e8e8e]">
             Recentes
           </h1>
           <Link

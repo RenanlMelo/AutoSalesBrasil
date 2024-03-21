@@ -52,11 +52,11 @@ export default function ServicosText() {
         )}
 
         <div className="flex flex-col items-center justify-center z-50 h-full mt-10 md:mt-0 mx-16 lg:mx-32 relative gap-y-10">
-          <div className="flex flex-col 2xl:items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
-            <p className="text-[#8e8e8e] text-xl lg:text-2xl 2xl:text-4xl border-b-2 px-2 pb-2 border-[#1864c7] font-bold tracking-tight text-left">
+          <div className="flex flex-col items-start 2xl:items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
+            <p className="text-[#8e8e8e] text-xl lg:text-2xl 2xl:text-4xl border-b-2 px-2 pb-2 border-[#1864c7] font-bold tracking-tight text-left w-fit">
               Nossos Serviços
             </p>
-            <p className="text-zinc-300 font-extralight text-sm lg:text-base 2xl:text-lg mt-1 w-full text-center">
+            <p className="text-zinc-300 font-extralight text-sm lg:text-base 2xl:text-lg mt-1 lg:w-full lg:text-center">
               Clique nos items para mais informações!
             </p>
           </div>
