@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const allowedOrigins = ["https://autosalesbrasil-server.vercel.app, https://autosalesbrasil-server.vercel.app/users"]; // Defina suas origens permitidas aqui
+const allowedOrigins = "https://autosalesbrasil.vercel.app, https://autosalesbrasil-server.vercel.app";
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -26,7 +26,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use("/", router);
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to DB"))
   .catch((err) => {
     console.error("Failed to connect to DB:", err);
