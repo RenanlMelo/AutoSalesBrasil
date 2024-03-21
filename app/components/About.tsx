@@ -6,7 +6,7 @@ export default function About() {
       <div className="w-full">
         <section className="mx-auto max-w-8xl mb-12 lg:mb-32">
           <div className="mb-4 w-full h-full flex px-0 md:px-16 xl:px-32 2xl:px-60 mt-24 md:mt-32 justify-start items-center">
-            <h1 className="mx-10 border-b-4 text-left border-[#1864c7] font-light text-[#8e8e8e] sm:text-lg lg:text-2xl 2xl:text-4xl md:mb-8 tracking-normal xl:tracking-tight">
+            <h1 className="mx-10 border-b-2 lg:border-b-4 text-left border-[#1864c7] font-light text-[#8e8e8e] sm:text-lg lg:text-2xl 2xl:text-4xl md:mb-8 tracking-normal xl:tracking-tight">
               Não vendemos apenas carros, <br />
               Entregamos seu sonho sobre quatro rodas
             </h1>
@@ -22,7 +22,7 @@ export default function About() {
               ></Image>
             </div>
             <div className="w-full flex flex-col justify-center items-start border-none xl:border-r border-zinc-700 text-[#8e8e8e] text-base 2xl:text-lg">
-              <p className=" font-light m-12 pb-6 mb-0 indent-10 leading-7 text-justify">
+              <p className=" font-light m-12 pb-6 mb-0 indent-10 leading-7 text-">
                 A <span className="font-semibold">Auto Sales Brasil</span> é o
                 resultado da paixão de dois sócios pelo universo automotivo. Com
                 o intuito de auxiliar nossos clientes, cuidamos da{" "}
