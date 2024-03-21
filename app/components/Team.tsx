@@ -5,7 +5,7 @@ export default function Team() {
   return (
     <>
       <div className="w-full flex flex-col justify-center text-[#8e8e8e] items-center bg-[#101010] py-24 px-10 overflow-hidden relative shadow-division">
-        <h1 className="text-2xl lg:text-4xl font-bold mb-8 border-b px-2 pb-2 border-slate-500 ">
+        <h1 className="text-xl lg:text-2xl 2xl:text-4xl font-bold mb-8 border-b px-2 pb-2 border-slate-500 ">
           Nossa Equipe
         </h1>
         <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box -translate-y-1/2 -translate-x-1/2 top-0 left-0" />
@@ -21,13 +21,13 @@ export default function Team() {
               height={500}
               className="w-[200px] md:w-[270px] mx-auto mb-10 rounded-full"
             />
-            <h3 className="p-2 text-lg md:text-2xl font-bold text-[#1864c7]">
+            <h3 className="p-2 text-lg lg:text-lg 2xl:text-2xl font-bold text-[#1864c7]">
               Gustavo Coloniesi
             </h3>
-            <p className="p-2 text-md md:text-xl font-semibold text-[#1864c7b8]">
+            <p className="p-2 text-md  lg:text-lg 2xl:text-xl font-semibold text-[#1864c7b8]">
               Experiente em veículos de categoria premium
             </p>
-            <p className="p-2 text-xs md:text-base text-justify indent-10 leading-7 font-light border-t border-slate-600">
+            <p className="p-2 text-xs lg:text-sm 2xl:text-base text-justify indent-10 leading-7 font-light border-t border-slate-600">
               Desde a infância, seu coração bate mais forte por carros, o que
               alimenta uma paixão duradoura pelo universo automobilístico. Em
               2018, mergulhou ainda mais nesse fascinante mundo, adquirindo
@@ -47,13 +47,13 @@ export default function Team() {
               height={500}
               className="w-[200px] md:w-[270px] mx-auto mb-10 rounded-full"
             />
-            <h3 className="p-2 text-xl md:text-2xl font-bold text-[#1864c7]">
+            <h3 className="p-2 text-xl 2xl:text-2xl font-bold text-[#1864c7]">
               Bruno Reis
             </h3>
-            <p className="p-2 text-md md:text-xl text-justify font-semibold text-[#1864c7b8]">
+            <p className="p-2 text-md lg:text-lg 2xl:text-xl text-justify font-semibold text-[#1864c7b8]">
               Responsável por Finanças & Gestão.
             </p>
-            <p className="p-2 text-xs md:text-base text-justify indent-10 leading-7 font-light border-t border-slate-600">
+            <p className="p-2 text-xs lg:text-sm 2xl:text-base text-justify indent-10 leading-7 font-light border-t border-slate-600">
               Co-fundador da Auto Sales Brasil, Bruno é um apaixonado por
               veículos desde os seus primeiros passos. Movido pela paixão e
               guiado por uma visão empreendedora, combinou sua fascinação por

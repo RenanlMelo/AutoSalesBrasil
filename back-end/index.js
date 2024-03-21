@@ -24,6 +24,11 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
 app.use("/", router);
 
 mongoose.connect(process.env.MONGO_URI)

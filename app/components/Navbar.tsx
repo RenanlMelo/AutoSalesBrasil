@@ -59,7 +59,7 @@ const Navbar = ({ isFixed }: any) => {
             className="w-16 rounded-full aspect-square xl:w-24 md:w-20"
           />
           <div className="flex flex-col items-center">
-            <h1 className="text-[#8e8e8e] font-semibold text-lg md:text-2xl xl:text-3xl px-2">
+            <h1 className="text-[#8e8e8e] font-semibold text-lg md:text-xl xl:text-2xl 2xl:text-3xl px-2">
               Auto Sales Brasil
             </h1>
             <span className="w-full bg-[#8e8e8e] h-px" />
@@ -76,7 +76,7 @@ const Navbar = ({ isFixed }: any) => {
                 <Link
                   href={link.href}
                   passHref
-                  className="text-xl xl:text-2xl text-[#1864c7] border-b-2 pb-1.5 border-[#1864c7] font-bold hover:text-[#909090] hover:border-[#909090] ease-in-out duration-300"
+                  className="text-lg xl:text-xl 2xl:text-2xl text-[#1864c7] border-b-2 pb-1.5 border-[#1864c7] font-bold hover:text-[#909090] hover:border-[#909090] ease-in-out duration-300"
                 >
                   {link.name}
                 </Link>
@@ -84,7 +84,7 @@ const Navbar = ({ isFixed }: any) => {
                 <Link
                   href={link.href}
                   passHref
-                  className="text-xl xl:text-2xl transition duration-100 text-[#909090] after:block after:h-[2px] after:bg-[#909090] after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center after:translate-y-1"
+                  className="text-lg xl:text-xl 2xl:text-2xl transition duration-100 text-[#909090] after:block after:h-[2px] after:bg-[#909090] after:w-full after:scale-x-0 after:hover:scale-x-110 after:transition after:duration-300 after:origin-center after:translate-y-1"
                 >
                   {link.name}
                 </Link>

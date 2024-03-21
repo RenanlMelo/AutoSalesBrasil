@@ -67,21 +67,21 @@ export default function NewestImages({ products }: iAppProps) {
                   <Image
                     src={product.imageUrl}
                     alt="Product image"
-                    className="object-coverscale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover "
+                    className="object-cover scale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover "
                     width={1200}
                     height={800}
                   />
                 </div>
                 <div className="mt-4 pb-6 flex justify-between rounded-lg">
                   <div className="pl-8 pt-4 pb-6">
-                    <h3 className="text-md md:text-xl text-gray-300">
+                    <h3 className="text-base lg:text-lg 2xl:text-xl text-gray-300">
                       {product.modelo}
                     </h3>
-                    <p className="mt-1 absolute text-md md:text-lg text-[#8e8e8e]">
+                    <p className="mt-1 absolute text-sm lg:text-base 2xl:text-lg text-[#8e8e8e]">
                       {product.categoria}
                     </p>
                   </div>
-                  <p className="text-lg md:text-xl font-medium pr-8 py-4 text-gray-400">
+                  <p className="text-base lg:text-lg 2xl:text-xl font-medium pr-8 py-4 text-gray-400">
                     {formatPrice(product.preco)}
                   </p>
                 </div>

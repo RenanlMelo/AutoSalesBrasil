@@ -8,8 +8,8 @@ export const Email = () => {
         style={{ backgroundImage: `url('/imagem.jpg')` }}
       >
         <span className="absolute inset-0 bg-black bg-opacity-60" />
-        <form className="lg:w-1/3 lg:bg-black/40 lg:backdrop-blur-md rounded-xl p-8 relative lg:my-40">
-          <h1 className="text-zinc-400 text-base sm:text-lg lg:text-2xl">
+        <form className="lg:w-1/2 2xl:w-1/3 lg:bg-black/40 lg:backdrop-blur-md rounded-xl p-8 relative lg:my-40">
+          <h1 className="text-zinc-400 text-base lg:text-lg 2xl:text-2xl">
             Deseja receber conteúdos exclusivos e novos anúncios? Insira seu
             E-mail abaixo!
           </h1>
@@ -17,7 +17,7 @@ export const Email = () => {
             <input
               id="inputEmail"
               type="text"
-              className="w-full rounded-lg p-2 sm:p-4 bg-black/40 border text-base lg:text-lg text-[#8e8e8e] border-zinc-500"
+              className="w-full rounded-lg p-2 sm:p-4 bg-black/40 border text-base 2xl:text-xl text-[#8e8e8e] border-zinc-500"
             />
             <label id="emailLabel" className="text-[#8e8e8e]">E-mail</label>
           </div>

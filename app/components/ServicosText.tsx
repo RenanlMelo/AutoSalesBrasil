@@ -9,7 +9,6 @@ export default function ServicosText() {
 
   const openInfo = () => {
     setShowText(true);
-    document.body.style.overflow = "hidden";
   };
 
   const closeInfo = () => {
@@ -23,7 +22,6 @@ export default function ServicosText() {
 
   const openInfo2 = () => {
     setShowText2(true);
-    document.body.style.overflow = "hidden";
   };
 
   const closeInfo2 = () => {
@@ -37,7 +35,6 @@ export default function ServicosText() {
 
   const openInfo3 = () => {
     setShowText3(true);
-    document.body.style.overflow = "hidden";
   };
 
   const closeInfo3 = () => {
@@ -55,11 +52,11 @@ export default function ServicosText() {
         )}
 
         <div className="flex flex-col items-center justify-center z-50 h-full mt-10 md:mt-0 mx-16 lg:mx-32 relative gap-y-10">
-          <div className="flex flex-col items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
-            <p className="text-[#8e8e8e] text-2xl lg:text-4xl border-b-2 px-2 pb-2 border-[#1864c7] font-bold tracking-tight">
+          <div className="flex flex-col 2xl:items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
+            <p className="text-[#8e8e8e] text-xl lg:text-2xl 2xl:text-4xl border-b-2 px-2 pb-2 border-[#1864c7] font-bold tracking-tight text-left">
               Nossos Serviços
             </p>
-            <p className="text-zinc-300 font-extralight text-base lg:text-lg mt-1 w-full text-center">
+            <p className="text-zinc-300 font-extralight text-sm lg:text-base 2xl:text-lg mt-1 w-full text-center">
               Clique nos items para mais informações!
             </p>
           </div>
@@ -109,7 +106,7 @@ export default function ServicosText() {
             </div>
             <a
               href="https://wa.me/5515992485445"
-              className="mb-36 md:mb-0 w-auto text-lg xl:text-2xl xl:translate-x-0 xl:translate-y-[200%] bg-white/10 text-zinc-300 text-center px-4 lg:px-8 py-3 lg:py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
+              className="mb-36 md:mb-0 w-auto text-lg 2xl:text-2xl xl:translate-x-0 xl:translate-y-[200%] bg-white/10 text-zinc-300 text-center px-4 lg:px-8 py-3 lg:py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
             >
               Entre em contato conosco via whatsapp!
             </a>
@@ -124,9 +121,9 @@ export default function ServicosText() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeInfo}
-            className="w-full h-full flex justify-center items-center fixed inset-0 z-[70] top-0 backdrop-blur-sm"
+            className="w-full h-full flex justify-center items-center relative md:fixed inset-0 z-[70] backdrop-blur-sm md:mb-0"
           >
-            <motion.div className="relative z-[70]">
+            <motion.div className="relative z-[70] h-full md:h-auto">
               <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -135,7 +132,7 @@ export default function ServicosText() {
                 alt="Fechar"
                 className="absolute cursor-pointer top-4 right-4 bg-zinc-700/70 p-2 rounded-full hover:bg-zinc-600/30 hover:scale-110 duration-200"
               />
-              <motion.ul className="text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
+              <motion.ul className="text-base 2xl:text-xl text-zinc-400 h-auto font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -221,7 +218,7 @@ export default function ServicosText() {
                 alt="Fechar"
                 className="absolute cursor-pointer top-4 right-4 bg-zinc-700/70 p-2 rounded-full hover:bg-zinc-600/30 hover:scale-110 duration-200"
               />
-              <motion.ul className="text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
+              <motion.ul className="text-base 2xl:text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] p-20 rounded-xl  max-w-5xl flex flex-col justify-center items-start text-justify">
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -299,7 +296,7 @@ export default function ServicosText() {
                 alt="Fechar"
                 className="absolute cursor-pointer top-4 right-4 bg-zinc-700/70 p-2 rounded-full hover:bg-zinc-600/30 hover:scale-110 duration-200"
               />
-              <motion.ul className="text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] py-10 px-20 rounded-xl max-w-5xl flex flex-col justify-center items-start text-justify">
+              <motion.ul className="text-base 2xl:text-xl text-zinc-400 h-96 font-light leading-10 list-disc bg-[#121215] z-[70] py-10 px-20 rounded-xl max-w-5xl flex flex-col justify-center items-start text-justify">
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}

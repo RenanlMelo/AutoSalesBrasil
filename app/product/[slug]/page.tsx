@@ -45,7 +45,7 @@ export default async function ProductPage({
     <>
       <Navbar />
       <div className="bg-[#100C12] shadow-carousel py-10">
-        <div className="px-4 md:px-8 lg:mx-16 xl:mx-32">
+        <div className="px-4 md:px-8 lg:mx-16 2xl:mx-32">
           <div className="grid xl:gap-8 grid-rows-[2] grid-cols-1 xl:grid-cols-5">
             {data.imagens && <ImageGallery images={data.imagens} />}
 
@@ -94,7 +94,7 @@ export default async function ProductPage({
                 <p className="text-2xl p-2 text-[#25d365d0]">{formatPrice(data.preco)}</p>
                 <a
                   id="hover"
-                  className="mt-6 bg-[#006039] w-full text-zinc-300 py-8 flex flex-col justify-center items-center scale-95 hover:scale-100 duration-200  hover:text-[#25D366] hover:bg-zinc-900"
+                  className="mt-6 bg-[#006039] w-full text-zinc-300 p-8 flex flex-col justify-center items-center scale-95 hover:scale-100 duration-200  hover:text-[#25D366] hover:bg-zinc-900"
                   href="https://wa.me/5515992485445"
                 >
                   <p className="text-md sm:text-lg italic font-semibold">

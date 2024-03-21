@@ -27,10 +27,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <>
       <div className="sidebar bg-[#090909] w-full lg:w-72 lg:h-screen z-20 lg:fixed overflow-hidden shadow-division pt-28 lg:pt-0">
         <span
-          className="w-[300px] h-[300px] xl:w-[700px] xl:h-[700px] rotate-4 absolute shadow-box
+          className="w-[300px] h-[300px] 2xl:w-[700px] 2xl:h-[700px] rotate-45 absolute shadow-box
          lg:-translate-x-1/2 lg:translate-y-[60%] top- lg:top-auto right-0 lg:right-auto lg:bottom-0 lg:left-0"
         />
-        <span className="w-[450px] h-[450px] xl:w-[520px] xl:h-[520px] rotate-45 absolute shadow-box -translate-x-1/2 translate-y-[60%] bottom-0 left-0" />
+        <span className="w-[450px] h-[450px] 2xl:w-[520px] 2xl:h-[520px] rotate-45 absolute shadow-box -translate-x-1/2 translate-y-[60%] bottom-0 left-0" />
         <div className="relative w-full h-full grid-rows-5 z-10 mt-6">
           <div className="filter text-center rounded-r-2xl p-2 flex w-full items-center justify-center gap-x-4">
             <p className="text-filter text-xl text-zinc-400 font-semibold tracking-wider">
