@@ -38,27 +38,18 @@ export default function Footer() {
     }
 
     try {
-      const checkEmailResponse = await axios.post(
+      const response = await axios.post(
         "https://autosalesbrasil-server.vercel.app/users",
         {
           email,
         }
       );
 
-      if (checkEmailResponse.status === 200) {
-        const response = await axios.post(
-          "https://autosalesbrasil-server.vercel.app/users",
-          {
-            email,
-          }
-        );
-
-        if (response.data.message === "Assinatura concluída com sucesso!") {
-          setSubscribeRes(response.data.message);
-          setTimeout(() => {
-            setSubscribeRes("");
-          }, 3000);
-        }
+      if (response.data.message === "Assinatura concluída com sucesso!") {
+        setSubscribeRes(response.data.message);
+        setTimeout(() => {
+          setSubscribeRes("");
+        }, 3000);
       }
     } catch (error) {
       console.log(error);
