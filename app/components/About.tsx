@@ -6,7 +6,7 @@ export default function About() {
       <div className="w-full">
         <section className="mx-auto max-w-8xl mb-12 lg:mb-32">
           <div className="mb-4 w-full h-full flex px-0 md:px-16 xl:px-32 2xl:px-60 mt-24 md:mt-32 justify-start items-center">
-            <h1 className="mx-10 border-b-4 text-left border-[#1864c7] font-light text-[#8e8e8e] text-[1.5rem] sm:text-2xl md:mb-8 md:text-[1.9rem] lg:text-4xl xl:text-4xl tracking-normal xl:tracking-tight">
+            <h1 className="mx-10 border-b-4 text-left border-[#1864c7] font-light text-[#8e8e8e] sm:text-lg lg:text-2xl 2xl:text-4xl md:mb-8 tracking-normal xl:tracking-tight">
               Não vendemos apenas carros, <br />
               Entregamos seu sonho sobre quatro rodas
             </h1>
