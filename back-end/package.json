@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon back-end/index.js",
-    "build": "node index.js",
-    "start": "node index.js"
+    "build": "npm install && node index.js",
+    "start": "node index.js",
+    "vercel": "vercel dev"
   },
   "keywords": [],
   "author": "",

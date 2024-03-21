@@ -12,7 +12,7 @@ export default function About() {
             </h1>
           </div>
           <div className="flex justify-center items-center sm:items-stretch flex-col lg:flex-row px-0 2xl:mx-60 bg-transparent shadow-about">
-            <div className="w-full lg:bg-transparent lg:w-1/2 flex justify-center lg:justify-end border-l border-zinc-700 relative ml-12">
+            <div className="w-full lg:bg-transparent lg:w-1/2 flex justify-center lg:justify-end border-none xl:border-l border-zinc-700 relative ml-12">
               <Image
                 src="/logo.png"
                 alt="logo"
@@ -21,7 +21,7 @@ export default function About() {
                 className="w-full md:w-2/3 mx-6 md:mx-0 lg:w-full aspect-square"
               ></Image>
             </div>
-            <div className="w-full flex flex-col justify-center items-start border-r border-zinc-700 text-[#8e8e8e]">
+            <div className="w-full flex flex-col justify-center items-start border-none xl:border-r border-zinc-700 text-[#8e8e8e]">
               <p className="text-lg font-light m-12 pb-6 mb-0 indent-10 leading-7 text-justify">
                 A <span className="font-semibold">Auto Sales Brasil</span> é o
                 resultado da paixão de dois sócios pelo universo automotivo. Com

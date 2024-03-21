@@ -234,7 +234,7 @@ input:valid {
 
 #inputFooter:focus ~ label,
 input:valid ~ label {
-  transform: translateY(0%) scale(1);
+  transform: translateY(-20%) scale(1);
   color: #2196f3;
 }
 

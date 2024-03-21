@@ -4,10 +4,10 @@ import React from "react";
 export function SocialMedia() {
   return (
     <>
-      <div className="z-[100] bg-[#202020] fixed right-0 bottom-24 flex flex-col justify-evenly items-center rounded-l-xl gap-y-1 shadow-socMed">
+      <div className="z-[100] bg-[#202020] fixed right-0 bottom-24 flex flex-col justify-evenly items-center rounded-l-xl gap-y-1 shadow-socMed overflow-hidden">
         <a
           href="https://www.instagram.com/autosalesbrasil/"
-          className="social-link flex justify-center items-center hover:text-[#150447]"
+          className="social-link flex justify-center items-center hover:scale-[1.2] duration-200"
         >
           <svg
             fill="#eee"
@@ -23,7 +23,7 @@ export function SocialMedia() {
           </svg>
         </a>
         <a
-          className="phone-link flex justify-center items-center mt-2"
+          className="phone-link flex justify-center items-center mt-2 hover:scale-[1.2] duration-200"
           href="https://wa.me/5515992485445"
         >
           <svg

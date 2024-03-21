@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "npm install && next build",
+    "start": "node back-end/index.js",
     "lint": "eslint ./src/**/*.js ./src/**/*.jsx", 
     "dev": "next lint && next dev",
     "test": "jest" 
