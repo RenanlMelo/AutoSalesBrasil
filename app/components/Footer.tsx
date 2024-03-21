@@ -40,14 +40,14 @@ export default function Footer() {
 
     try {
       const checkEmailResponse = await axios.post(
-        "https://autosalesbrasil-server.vercel.app",
+        "https://autosalesbrasil-server.vercel.app/users/check-email",
         {
           email,
         }
       );
 
       if (checkEmailResponse.status === 200) {
-        const response = await axios.post("https://autosalesbrasil-server.vercel.app", {
+        const response = await axios.post("https://autosalesbrasil-server.vercel.app/users", {
           email,
         });
 
