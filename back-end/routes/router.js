@@ -13,7 +13,7 @@ router.post("/users", async (req, res) => {
     } else {
       const newEmail = new schemas.Users({ email });
       const saveEmail = await newEmail.save();
-
+      console.log(saveEmail);
       if (saveEmail) {
         res.status(201).json({ message: "Assinatura concluída com sucesso!" });
       }

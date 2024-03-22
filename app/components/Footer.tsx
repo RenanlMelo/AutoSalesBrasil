@@ -39,11 +39,12 @@ export default function Footer() {
 
     try {
       const response = await axios.post(
-        "https://autosalesbrasil-server.vercel.app/users",
+        "https://back-end-omega-five.vercel.app/api/users",
         {
           email,
         }
       );
+      console.log(response);
 
       if (response.data.message === "Assinatura concluída com sucesso!") {
         setSubscribeRes(response.data.message);
