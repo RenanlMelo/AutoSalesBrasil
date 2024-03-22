@@ -95,7 +95,7 @@ export const EmailBox = () => {
           Enviar
         </button>
         {subscribeRes && (
-          <div className="text-lg absolute translate-y-[125%] w-full text-center bottom-0 text-zinc-400">
+          <div className="text-lg absolute translate-y-[125%] w-full text-center left-0 text-zinc-400 font-bold bg-zinc-950 rounded-xl p-3">
             {subscribeRes}
           </div>
         )}

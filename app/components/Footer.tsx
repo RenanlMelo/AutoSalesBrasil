@@ -75,7 +75,7 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-[#040407] w-full flex flex-col-reverse lg:flex-row justify-between items-center bg-center px-16 lg:px-28 pt-24 lg:pt-32 relative"
+      className="bg-[#040407] w-full flex flex-col-reverse lg:flex-row justify-between items-center px-16 lg:px-28 pt-24 lg:pt-32 relative"
     >
       <Image
         src="arrow.svg"
@@ -101,15 +101,15 @@ export default function Footer() {
         )}
       </AnimatePresence>
       <div className="w-full h-full flex flex-col">
-        <div className="flex justify-between flex-col lg:flex-row gap-x-12">
-          <div className="mb-12 lg:mb-0">
+        <div className="flex justify-between flex-col sm:flex-row gap-x-12">
+          <div className="mb-12 lg:mb-0 w-full">
             <span className="text-lg 2xl:text-2xl text-zinc-400 ">
               Entre em contato conosco via{" "}
               <strong className="text-[#25D366]">Whatsapp</strong> e anuncie
               imediatamente!
             </span>
-            <div className="flex flex-col items-center justify-center h-full lg:max-w-md">
-              <p className="text-zinc-400 mt-16 lg:mt-0 font-light mb-3 text-sm md:text-base">
+            <div className="flex flex-col items-center justify-center h-full max-w-md">
+              <p className="text-zinc-400 mt-16 sm:mt-0 font-light mb-3 text-sm md:text-base text-left w-full">
                 Deseja receber conteúdos exclusivos e novos anúncios? Insira seu
                 E-mail abaixo!
               </p>
@@ -142,7 +142,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col-reverse justify-between lg:justify-end  items-start h-full w-full lg:w-auto gap-y-10">
+          <div className="flex flex-col-reverse justify-between lg:justify-end items-center  md:items-start h-full w-auto gap-y-10">
             <div className="mr-0 xl:mr-16 h-full">
               <p className="text-base 2xl:text-xl text-zinc-300 mb-2 text-center">
                 Horário de atendimento

@@ -5,6 +5,7 @@ import { simplifiedProduct } from "../../interface";
 import Link from "next/link";
 import Image from "next/image";
 
+
 interface iAppProps {
   products: any;
   sort?: string;
@@ -39,7 +40,7 @@ export default function AnunciosImages({ products, sort, updateSort }: iAppProps
 
   return (
     <>
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-3 xl:gap-x-8 w-full">
+      <div className="mt-6 grid grid-cols-1 gap-y-10 md:grid-cols-2 xl:grid-cols-3 sm:px-10 lg:px-0 gap-x-20 lg:gap-x-10 2xl:gap-x-8 w-full">
         {sortProducts().map((product: simplifiedProduct) => (
           <div
             key={product._id}
@@ -67,16 +68,16 @@ export default function AnunciosImages({ products, sort, updateSort }: iAppProps
               </Link>
             </div>
 
-            <div className="mt-2 pb-2 flex justify-between">
-              <div className="px-8 pt-4 pb-6">
+            <div className="mt-2 pb-2 flex justify-between flex-col 2xl:flex-row">
+              <div className="px-8 pt-4 pb-0 2xl:pb-6">
                 <h3 className="text-lg text-gray-300">{product.modelo}</h3>
                 <p className="mt-1 text-md text-gray-400">
                   {product.categoria}
                 </p>
               </div>
-              <p className="text-lg font-medium pr-8 pt-4 text-gray-300">
+              <div className="text-lg font-medium py-4 text-gray-300 px-8 2xl:px-8 text-right">
                 {formatPrice(product.preco)}
-              </p>
+              </div>
             </div>
           </div>
         ))}

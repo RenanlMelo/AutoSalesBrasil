@@ -5,6 +5,7 @@ import { Sidebar } from "../components/anuncios/SideBar";
 import Navbar from "../components/Navbar";
 import { ClientPage } from "../components/anuncios/ClientPage";
 
+
 async function getData() {
   let query = `*[_type == "product"] {
     _id,
