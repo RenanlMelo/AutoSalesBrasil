@@ -52,6 +52,8 @@ export default function Footer() {
         }, 3000);
       } else if (response.status === 208) {
         setSubscribeRes("Este E-mail já está cadastrado.");
+        console.log("Foi");
+        
         setTimeout(() => {
           setSubscribeRes("");
         }, 3000);
