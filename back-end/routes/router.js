@@ -9,7 +9,7 @@ router.post("/users", async (req, res) => {
     const existingUser = await schemas.Users.findOne({ email });
 
     if (existingUser) {
-      res.status(208).json({ message: 'Este E-mail já está cadastrado.'});
+      res.status(208).json({});
     } else {
       const newEmail = new schemas.Users({ email });
       const saveEmail = await newEmail.save();
