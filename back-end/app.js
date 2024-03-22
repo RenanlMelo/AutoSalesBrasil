@@ -19,10 +19,10 @@ const corsOptions = {
     }
   },
   credentials: true,
-  optionSuccessStatus: 200,
+  optionSuccessStatus: 200 ,
 };
 
-app.use(cors('*'));
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("Express on Vercel");

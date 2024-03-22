@@ -44,9 +44,13 @@ export default function Footer() {
           email,
         }
       );
-      console.log(response);
 
-      if (response.data.message === "Assinatura concluída com sucesso!") {
+      if (response.status === 201) {
+        setSubscribeRes(response.data.message);
+        setTimeout(() => {
+          setSubscribeRes("");
+        }, 3000);
+      } else if (response.status === 208) {
         setSubscribeRes(response.data.message);
         setTimeout(() => {
           setSubscribeRes("");
@@ -116,7 +120,9 @@ export default function Footer() {
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full mb-2 mt-6 rounded-lg text-zinc-400 text-base bg-transparent border-zinc-500 p-2 lg:p-3 2xl:p-4"
                   />
-                  <label id="footerLabel" className="text-sm">E-mail</label>
+                  <label id="footerLabel" className="text-sm">
+                    E-mail
+                  </label>
                 </div>
                 <button
                   type="submit"
