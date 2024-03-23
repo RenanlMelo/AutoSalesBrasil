@@ -30,7 +30,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
           className="w-[300px] h-[300px] 2xl:w-[700px] 2xl:h-[700px] rotate-45 absolute shadow-box translate-x-1/2 -translate-y-1/3
          lg:-translate-x-1/2 lg:translate-y-[60%] top-0 right-0 lg:top-auto lg:right-auto lg:bottom-0 lg:left-0"
         />
-        <span className="w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] 2xl:w-[520px] 2xl:h-[520px] rotate-45 absolute shadow-box translate-x-1/2 -translate-y-1/3 lg:-translate-x-1/2 lg:translate-y-[60%] top-0 right-0 lg:top-auto lg:right-auto lg:bottom-0 lg:left-0" />
+        <span className="w-[200px] h-[200px] lg:w-[500px] lg:h-[500px] 2xl:w-[520px] 2xl:h-[520px] rotate-45 absolute shadow-box translate-x-1/2 -translate-y-1/3 lg:-translate-x-1/2 lg:translate-y-[60%] top-0 right-0 lg:top-auto lg:right-auto lg:bottom-0 lg:left-0" />
         <div className="relative w-full h-full grid-rows-5 z-10 mt-6">
           <div className="filter text-center rounded-r-2xl p-2 flex w-full items-center justify-center gap-x-4">
             <p className="text-xl text-zinc-400 font-semibold tracking-wider">
