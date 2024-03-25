@@ -52,7 +52,7 @@
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
-  height: 45px;
+  height: 4px;
   margin-left: 40px;
   background: #303030;
   padding: 30px 30px 30px 25px;
@@ -86,9 +86,11 @@
 @media screen and (max-width: 1024px) {
   .swiper-button-prev::after {
     margin-left: 0px;
+    transform: scale(0.8);
   }
-
+  
   .swiper-button-next::after {
+    transform: scale(0.8);
     margin-right: 0px;
   }
 

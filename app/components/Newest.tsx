@@ -24,7 +24,7 @@ export default async function Newest() {
 
   return (
     <div className="bg-[#101010] mt-24 shadow-division">
-      <div className="mx-auto py-16 px-6 md:px-16 sm:py-24 lg:px-24 shadow-carousel relative overflow-hidden">
+      <div className="mx-auto py-16 px-6 md:px-16 sm:py-24 lg:px-32 shadow-carousel relative overflow-hidden">
         <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 -translate-x-1/2 bottom-0 left-0" />
         <span className="w-[100px] h-[100px] md:w-[250px] md:h-[250px] rotate-45 absolute shadow-box translate-y-1/2 -translate-x-1/2 bottom-0 left-0" />
         <span className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] rotate-45 absolute shadow-box translate-y-1/2 translate-x-1/2 bottom-0 right-0" />
