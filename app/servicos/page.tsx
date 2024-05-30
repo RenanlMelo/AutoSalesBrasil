@@ -1,43 +1,37 @@
-import Image from "next/image";
 import { client } from "../lib/sanity";
 import { imageProduct } from "../interface";
 import Footer from "@/app/components/Footer";
-import ServicosText from "@/app/components/ServicosText";
 import Navbar from "../components/Navbar";
+import ServicosText from "../components/ServicosText";
+import Image from "next/image";
 
-async function getData(): Promise<imageProduct> {
-  const query = `*[_type == "product"][0] {
-      _id,
-      "imageUrl": imagens[0].asset->url,
+async function getData() {
+  const query = `*[_type == "servicos"] | order(_createdAt desc) {
+    _id,
+      'image1': imagem1.asset->url,
+      'image2': imagem2.asset->url,
+      'image3': imagem3.asset->url,
   }`;
 
   const data = await client.fetch(query);
 
-  // Return a Promise that resolves to the data
-  return new Promise((resolve) => {
-    resolve({
-      ...data,
-      imageUrl: {
-        url: data.imageUrl,
-      },
-    });
-  });
+  return data;
 }
 
 export default async function ServicosPage() {
-  const imageProduct = await getData();
+  const data = await getData();
 
   return (
     <>
-    <Navbar isFixed={false} />
-      <div
-        className="relative bg-fixed w-full h-[624px] md:h-[500px] lg:h-[1024px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${imageProduct.imageUrl.url})` }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-80" />
-
-        <ServicosText />
-      </div>
+      <Navbar isFixed={false} />
+      {data.map((data: imageProduct) => (
+        <ServicosText
+          key={data._id}
+          image1={data.image1}
+          image2={data.image2}
+          image3={data.image3}
+        />
+      ))}
       <Footer />
     </>
   );

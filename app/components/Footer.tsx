@@ -10,6 +10,7 @@ export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribeRes, setSubscribeRes] = useState("");
 
+  
   const showMessage = () => {
     setShow(true);
   };

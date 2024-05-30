@@ -62,7 +62,7 @@ export default function NewestImages({ products }: iAppProps) {
               <Link href={`/product/${product.slug}`}>
                 <div
                   onClick={() => handleImageClick(product._id)}
-                  className="aspect-video  overflow-hidden flex justify-center  items-center w-full group-hover:opacity-75 relative"
+                  className="aspect-video overflow-hidden flex justify-center items-center w-full group-hover:opacity-75 relative"
                 >
                   {loading === product._id && (
                     <div className="bg-black/60 z-[100] w-full h-full absolute flex justify-center items-center">
@@ -72,7 +72,7 @@ export default function NewestImages({ products }: iAppProps) {
                   <Image
                     src={product.imageUrl}
                     alt="Product image"
-                    className="object-cover scale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover "
+                    className="object-cover scale-100 hover:scale-110 duration-500 ease-in-out bg-center bg-cover rounded-lg"
                     width={1200}
                     height={800}
                   />

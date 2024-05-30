@@ -4,7 +4,8 @@ import { simplifiedProduct } from "@/app/interface";
 import NewestImages from "./NewestImages";
 
 async function getData() {
-  const query = `*[_type == "product" && _updatedAt < now()] | order(_publishedAt asc) [0...5] {
+  const query = `*[_type == "product"] | order(_createdAt desc) [0...5] {
+    _createdAt,
     _id,
       modelo,
       preco,

@@ -1,4 +1,5 @@
 export interface simplifiedProduct {
+  _createdAt: string;
   _id: string;
   categoria: string;
   imageUrl: string;
@@ -10,7 +11,6 @@ export interface simplifiedProduct {
 export interface ProductWithFormattedPrice extends simplifiedProduct {
   formattedPrice: string;
 }
-
 
 export interface fullProduct {
   _id: string;
@@ -30,7 +30,7 @@ export interface fullProduct {
 
 export interface imageProduct {
   _id: string;
-  imageUrl: {
-    url: string;
-  };
+  image1: string;
+  image2: string;
+  image3: string;
 }

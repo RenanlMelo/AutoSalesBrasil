@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-export default function ServicosText() {
+export default function ServicosText({ image1, image2, image3 }: any) {
   const [showText, setShowText] = useState(false);
 
   const openInfo = () => {
@@ -46,67 +46,54 @@ export default function ServicosText() {
 
   return (
     <>
-      <div className="absolute top-0 w-full h-full">
+      <div className="w-full shadow-about">
         {(showText || showText2 || showText3) && (
           <div className="fixed bg-black opacity-50 inset-0 z-[60]" />
         )}
 
-        <div className="flex flex-col items-center justify-center z-50 h-full mt-10 md:mt-0 mx-16 lg:mx-32 relative gap-y-10">
-          <div className="flex flex-col items-start 2xl:items-center justify-center mt-10 w-full md:w-auto md:mt-0 md:absolute md:translate-x-0 top-24 left-0 ">
-            <p className="text-[#8e8e8e] text-xl lg:text-2xl 2xl:text-4xl border-b-2 px-2 pb-2 border-[#1864c7] font-bold tracking-tight text-left">
-              Nossos Serviços
-            </p>
-            <p className="text-zinc-300 font-extralight text-sm lg:text-base 2xl:text-lg mt-1 lg:w-full lg:text-center">
+        <div className="p-32 pb-52 relative">
+          <div className="w-full flex justify-center items-center flex-col">
+            <div className="border-b-2 px-2 pb-2 border-[#1864c7] w-fit">
+              <p className="text-[#8e8e8e] w-full text-xl lg:text-2xl 2xl:text-4xl font-bold tracking-tight text-center">
+                Nossos Serviços
+              </p>
+            </div>
+            <p className="text-[#8e8e8e] font-semibold text-sm lg:text-base 2xl:text-lg">
               Clique nos items para mais informações!
             </p>
           </div>
-          <div className="flex justify-between relative flex-col md:flex-row-reverse xl:flex-col items-center md:items-end xl:items-center w-full gap-y-10">
-            <div className="flex justify-between items-center md:items-end xl:items-center w-full md:w-1/4 lg:w-1/3 xl:w-full flex-col gap-y-10 xl:flex-row">
-              <div //1
-                className="cursor-pointer text-zinc-300 z-10 w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
-                onClick={openInfo}
-              >
+          <div className="flex justify-evenly items-center py-16 rounded-xl bg-[#101010] w-4/6 absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 shadow-[10px_0_30px_0_rgba(250,250,250,1))]">
+            <div //1º Serviço
+              className="cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:scale-105 duration-200"
+              onClick={openInfo}
+            >
+              <div className="px-8 py-3 flex justify-center items-center h-1/3 ">
                 <h1>Compra</h1>
-                <Image
-                  className="hidden lg:block w-12 lg:w-16"
-                  alt="Compra"
-                  width={100}
-                  height={100}
-                  src="/car.png"
-                />
-              </div>
-
-              <div //2
-                className="cursor-pointer text-zinc-300 z-10 w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
-                onClick={openInfo2}
-              >
-                <h1>Venda</h1>
-                <Image
-                  className="hidden lg:block w-14 lg:w-20"
-                  alt="Venda"
-                  width={100}
-                  height={100}
-                  src="/sell.png"
-                />
-              </div>
-
-              <div
-                className="cursor-pointer text-zinc-300 z-10 w-full xl:w-1/4 lg:text-xl 2xl:text-3xl font-bold text-center p-4 xl:p-7 rounded-3xl backdrop-blur-md shadow-servicos bg-white/10 flex items-center justify-center gap-10 hover:shadow-servicosHover duration-200"
-                onClick={openInfo3}
-              >
-                <h1>Plano Content</h1>
-                <Image
-                  className="hidden lg:block w-12 lg:w-16"
-                  alt="Plano Content"
-                  width={100}
-                  height={100}
-                  src="/plan.png"
-                />
               </div>
             </div>
+
+            <div //2º Serviço
+              className="cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:scale-105 duration-200"
+              onClick={openInfo2}
+            >
+              <div className="px-8 py-3 flex justify-center items-center h-1/3 ">
+                <h1>Venda</h1>
+              </div>
+            </div>
+
+            <div //3º Serviço
+              className="cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:scale-105 duration-200"
+              onClick={openInfo3}
+            >
+              <div className="px-8 py-3 flex justify-center items-center h-1/3 ">
+                <h1>Plano Content</h1>
+              </div>
+            </div>
+          </div>
+          <div className="absolute right-0">
             <a
               href="https://wa.me/5515992485445"
-              className="mb-36 md:mb-0 w-auto text-lg 2xl:text-2xl xl:translate-x-0 xl:translate-y-[200%] bg-white/10 text-zinc-300 text-center px-4 lg:px-8 py-3 lg:py-6 rounded-2xl backdrop-blur-md shadow-servicos hover:shadow-whatsappHover hover:text-green-500 hover:scale-105 duration-200 ease-in-out"
+              className="mb-36 md:mb-0 w-auto text-lg text-zinc-300 border px-6 py-4 rounded-xl hover:text-[#25D366] hover:border-[#25D366] hover:scale-105 duration-200"
             >
               Entre em contato conosco via whatsapp!
             </a>
@@ -148,7 +135,8 @@ export default function ServicosText() {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Será que o carro está em boas condições?
+                  Vai comprar o seu tão sonhado carro premium, mas não sabe por
+                  onde começar? Será que o carro está em boas condições?
                 </motion.li>
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
@@ -156,7 +144,9 @@ export default function ServicosText() {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Será que é golpe?
+                  Vai comprar o seu tão sonhado carro premium, mas não sabe por
+                  onde começar? Será que o carro está em boas condições? Será
+                  que é golpe?
                 </motion.li>
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
@@ -164,7 +154,10 @@ export default function ServicosText() {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Não sei de mecânica, posso estar entrando em uma furada?
+                  Vai comprar o seu tão sonhado carro premium, mas não sabe por
+                  onde começar? Será que o carro está em boas condições? Será
+                  que é golpe? Não sei de mecânica, posso estar entrando em uma
+                  furada?
                 </motion.li>
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
@@ -172,7 +165,10 @@ export default function ServicosText() {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  Não tenho tempo para visitar e nem negociar, e agora?
+                  Vai comprar o seu tão sonhado carro premium, mas não sabe por
+                  onde começar? Será que o carro está em boas condições? Será
+                  que é golpe? Não sei de mecânica, posso estar entrando em uma
+                  furada? Não tenho tempo para visitar e nem negociar, e agora?
                 </motion.li>
                 <motion.li
                   initial={{ x: 100, opacity: 0 }}
@@ -180,6 +176,10 @@ export default function ServicosText() {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ delay: 0.3 }}
                 >
+                  Vai comprar o seu tão sonhado carro premium, mas não sabe por
+                  onde começar? Será que o carro está em boas condições? Será
+                  que é golpe? Não sei de mecânica, posso estar entrando em uma
+                  furada? Não tenho tempo para visitar e nem negociar, e agora?
                   Se você se identificou com qualquer uma dessas perguntas, este
                   serviço é para você.
                 </motion.li>
@@ -189,11 +189,7 @@ export default function ServicosText() {
                   exit={{ x: 100, opacity: 0 }}
                   transition={{ delay: 0.3 }}
                   className="w-full text-center mt-4"
-                >
-                  Entre em contato no botão{" "}
-                  <strong className="font-bold">abaixo</strong>, será um prazer
-                  te ajudar!
-                </motion.p>
+                ></motion.p>
               </motion.ul>
             </motion.div>
           </motion.div>
@@ -327,13 +323,121 @@ export default function ServicosText() {
                   className="w-full text-center mt-4"
                 >
                   Entre em contato pelo botão{" "}
-                  <strong className="font-bold">abaixo</strong>, para que possamos ajudá-lo.
+                  <strong className="font-bold">abaixo</strong>, para que
+                  possamos ajudá-lo.
                 </motion.p>
               </motion.ul>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <div className="w-full">
+        <div className="w-full py-40 px-32">
+          <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
+            Compra
+          </h2>
+          <ul className="text-lg text-[#8e8e8e] flex gap-y-2 flex-col">
+            <li>
+              Vai comprar o seu tão sonhado carro premium, mas não sabe por onde
+              começar?
+            </li>
+            <li>Será que o carro está em boas condições?</li>
+            <li>Não sei de mecânica, posso estar entrando em uma furada?</li>
+            <li>Não tenho tempo para visitar e nem negociar, e agora?</li>
+            <li>
+              {" "}
+              Se você se identificou com
+              <strong className="font-bold"> qualquer uma </strong> dessas
+              perguntas, este serviço é para você.
+            </li>
+            <li className="my-2 px-2 text-xl text-[#8e8e8e] border-b border-[#8e8e8e] w-fit">
+              Entre em contato conosco via
+              <strong className="font-bold"> whatsapp</strong>, será um prazer
+              te ajudar!
+            </li>
+          </ul>
+          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+        </div>
+        <div className="w-full my-16 py-16 px-32">
+          <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
+            Compra
+          </h2>
+          <ul className="text-lg text-[#8e8e8e] flex gap-y-2 flex-col">
+            <li>
+              Vai comprar o seu tão sonhado carro premium, mas não sabe por onde
+              começar?
+            </li>
+            <li>Será que o carro está em boas condições?</li>
+            <li>Não sei de mecânica, posso estar entrando em uma furada?</li>
+            <li>Não tenho tempo para visitar e nem negociar, e agora?</li>
+            <li>
+              {" "}
+              Se você se identificou com
+              <strong className="font-bold"> qualquer uma </strong> dessas
+              perguntas, este serviço é para você.
+            </li>
+            <li className="my-2 px-2 text-xl text-[#8e8e8e] border-b border-[#8e8e8e] w-fit">
+              Entre em contato conosco via
+              <strong className="font-bold"> whatsapp</strong>, será um prazer
+              te ajudar!
+            </li>
+          </ul>
+          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+        </div>
+        <div className="w-full my-16 py-16 px-32">
+          <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
+            Compra
+          </h2>
+          <ul className="text-lg text-[#8e8e8e] flex gap-y-2 flex-col">
+            <li>
+              Vai comprar o seu tão sonhado carro premium, mas não sabe por onde
+              começar?
+            </li>
+            <li>Será que o carro está em boas condições?</li>
+            <li>Não sei de mecânica, posso estar entrando em uma furada?</li>
+            <li>Não tenho tempo para visitar e nem negociar, e agora?</li>
+            <li>
+              {" "}
+              Se você se identificou com
+              <strong className="font-bold"> qualquer uma </strong> dessas
+              perguntas, este serviço é para você.
+            </li>
+            <li className="my-2 px-2 text-xl text-[#8e8e8e] border-b border-[#8e8e8e] w-fit">
+              Entre em contato conosco via
+              <strong className="font-bold"> whatsapp</strong>, será um prazer
+              te ajudar!
+            </li>
+          </ul>
+          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+        </div>
+        <div className="w-full my-16 py-16 px-32">
+          <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
+            Compra
+          </h2>
+          <ul className="text-lg text-[#8e8e8e] flex gap-y-2 flex-col">
+            <li>
+              Vai comprar o seu tão sonhado carro premium, mas não sabe por onde
+              começar?
+            </li>
+            <li>Será que o carro está em boas condições?</li>
+            <li>Não sei de mecânica, posso estar entrando em uma furada?</li>
+            <li>Não tenho tempo para visitar e nem negociar, e agora?</li>
+            <li>
+              {" "}
+              Se você se identificou com
+              <strong className="font-bold"> qualquer uma </strong> dessas
+              perguntas, este serviço é para você.
+            </li>
+            <li className="my-2 px-2 text-xl text-[#8e8e8e] border-b border-[#8e8e8e] w-fit">
+              Entre em contato conosco via
+              <strong className="font-bold"> whatsapp</strong>, será um prazer
+              te ajudar!
+            </li>
+          </ul>
+          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+        </div>
+      </div>
     </>
   );
 }
