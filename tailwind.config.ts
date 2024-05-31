@@ -87,7 +87,7 @@ const config = {
         socMed: "0 0 10px 2px rgba(0, 0, 0, .4)",
         box: "inset 0 0 10px 0 rgba(41, 134, 255, .5), inset 0 0 100px 0 rgba(41, 134, 255, .5)",
         division: "0 0 40px 0 rgba(0, 0, 0, 1)",
-        send: "0 0 40px 0 rgba(24, 100, 199, .5)",
+        send: "0 0 20px 0 rgba(24, 100, 199, .5)",
         textr: "-5px 7px 15px 0 rgba(0, 0, 0, 1)",
         textl: "5px 7px 15px 0 rgba(0, 0, 0, 1)",
         card: "0px 0px 20px 0px rgba(250, 0, 0, 1)",

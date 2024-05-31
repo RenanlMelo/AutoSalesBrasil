@@ -91,10 +91,10 @@ export default async function ProductPage({
                   </span>
                   <p className="text-sm sm:text-md">{data.descricao}</p>
                 </div>
-                <p className="text-2xl p-2 text-[#25d365d0]">{formatPrice(data.preco)}</p>
+                <p className="text-2xl p-2 text-[#25d365af]">{formatPrice(data.preco)}</p>
                 <a
                   id="hover"
-                  className="mt-6 bg-[#006039] w-full text-zinc-300 p-8 flex flex-col justify-center items-center scale-95 hover:scale-100 duration-200  hover:text-[#25D366] hover:bg-zinc-900"
+                  className="mt-6 bg-[#006039] w-full text-zinc-300 p-8 flex flex-col justify-center items-center duration-200  hover:text-[#25d365af] border border-transparent hover:border-[#25d365af] hover:bg-zinc-900"
                   href="https://wa.me/5515992485445"
                 >
                   <p className="text-md sm:text-lg italic font-semibold">

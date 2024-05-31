@@ -11,7 +11,7 @@ export default async function ServicosResume() {
               Serviços
             </p>
           </span>
-          <div className="text-lg lg:text-xl 2xl:text-2xl mb-10 lg:mb-16 static lg:absolute right-0 top-16 p-3 rounded-lg border border-[#1864c7] text-[#1864c7] hover:shadow-send  hover:scale-110 duration-200">
+          <div className="text-lg lg:text-xl 2xl:text-2xl mb-10 lg:mb-16 static lg:absolute right-0 top-16 p-3 rounded-lg border border-[#1864c7] text-[#1864c7] hover:shadow-send duration-200">
             <Link href="/servicos">
               Clique para acessar nossa página com mais detalhes!
             </Link>

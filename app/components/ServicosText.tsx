@@ -51,7 +51,7 @@ export default function ServicosText({ image1, image2, image3 }: any) {
           <div className="fixed bg-black opacity-50 inset-0 z-[60]" />
         )}
 
-        <div className="p-32 pb-52 relative">
+        <div className="py-32 px-32 pb-24 shadow-[0_30px_40px_-25px_rgba(0,0,0,1)] relative gap-y-24 flex flex-col">
           <div className="w-full flex justify-center items-center flex-col">
             <div className="border-b-2 px-2 pb-2 border-[#1864c7] w-fit">
               <p className="text-[#8e8e8e] w-full text-xl lg:text-2xl 2xl:text-4xl font-bold tracking-tight text-center">
@@ -62,9 +62,9 @@ export default function ServicosText({ image1, image2, image3 }: any) {
               Clique nos items para mais informações!
             </p>
           </div>
-          <div className="flex justify-evenly items-center py-16 rounded-xl bg-[#101010] w-4/6 absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 shadow-[10px_0_30px_0_rgba(250,250,250,1))]">
+          <div className="flex justify-evenly items-center gap-y-4 rounded-xl bg-[#101010] w-full shadow-[10px_0_30px_0_rgba(250,250,250,1))]">
             <div //1º Serviço
-              className="cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:scale-105 duration-200"
+              className="shadow-[0_20px_20px_-10px_rgba(0,0,0,1)] hover:shadow-[0_30px_30px_-10px_rgba(0,0,0,1)] cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:bg-[#222228] duration-200"
               onClick={openInfo}
             >
               <div className="px-8 py-3 flex justify-center items-center h-1/3 ">
@@ -73,7 +73,7 @@ export default function ServicosText({ image1, image2, image3 }: any) {
             </div>
 
             <div //2º Serviço
-              className="cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:scale-105 duration-200"
+              className="shadow-[0_20px_20px_-10px_rgba(0,0,0,1)] hover:shadow-[0_30px_30px_-10px_rgba(0,0,0,1)] cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:bg-[#222228] duration-200"
               onClick={openInfo2}
             >
               <div className="px-8 py-3 flex justify-center items-center h-1/3 ">
@@ -82,7 +82,7 @@ export default function ServicosText({ image1, image2, image3 }: any) {
             </div>
 
             <div //3º Serviço
-              className="cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:scale-105 duration-200"
+              className="shadow-[0_20px_20px_-10px_rgba(0,0,0,1)] hover:shadow-[0_30px_30px_-10px_rgba(0,0,0,1)] cursor-pointer rounded-2xl overflow-hidden text-zinc-300 z-10 py-6 w-full xl:w-1/4 lg:text-xl 2xl:text-2xl font-bold flex flex-col items-center justify-center gap-x-10 bg-zinc-900 hover:bg-[#222228] duration-200"
               onClick={openInfo3}
             >
               <div className="px-8 py-3 flex justify-center items-center h-1/3 ">
@@ -333,7 +333,7 @@ export default function ServicosText({ image1, image2, image3 }: any) {
       </AnimatePresence>
 
       <div className="w-full">
-        <div className="w-full py-40 px-32">
+        <div className="py-32 px-12 mx-32 border-b border-[#8e8e8e50]">
           <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
             Compra
           </h2>
@@ -357,9 +357,10 @@ export default function ServicosText({ image1, image2, image3 }: any) {
               te ajudar!
             </li>
           </ul>
-          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+          <div className="w-11/12 h-px mx-auto" />
         </div>
-        <div className="w-full my-16 py-16 px-32">
+        
+        <div className="py-32 px-12 mx-32 border-b border-[#8e8e8e50]">
           <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
             Compra
           </h2>
@@ -383,9 +384,10 @@ export default function ServicosText({ image1, image2, image3 }: any) {
               te ajudar!
             </li>
           </ul>
-          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+          <div className="w-11/12 h-px mx-auto" />
         </div>
-        <div className="w-full my-16 py-16 px-32">
+    
+        <div className="py-32 px-12 mx-32 border-b border-[#8e8e8e50]">
           <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
             Compra
           </h2>
@@ -409,34 +411,10 @@ export default function ServicosText({ image1, image2, image3 }: any) {
               te ajudar!
             </li>
           </ul>
-          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
+          <div className="w-11/12 h-px mx-auto" />
         </div>
-        <div className="w-full my-16 py-16 px-32">
-          <h2 className="text-4xl text-[#8e8e8e] font-bold px-3 mb-10">
-            Compra
-          </h2>
-          <ul className="text-lg text-[#8e8e8e] flex gap-y-2 flex-col">
-            <li>
-              Vai comprar o seu tão sonhado carro premium, mas não sabe por onde
-              começar?
-            </li>
-            <li>Será que o carro está em boas condições?</li>
-            <li>Não sei de mecânica, posso estar entrando em uma furada?</li>
-            <li>Não tenho tempo para visitar e nem negociar, e agora?</li>
-            <li>
-              {" "}
-              Se você se identificou com
-              <strong className="font-bold"> qualquer uma </strong> dessas
-              perguntas, este serviço é para você.
-            </li>
-            <li className="my-2 px-2 text-xl text-[#8e8e8e] border-b border-[#8e8e8e] w-fit">
-              Entre em contato conosco via
-              <strong className="font-bold"> whatsapp</strong>, será um prazer
-              te ajudar!
-            </li>
-          </ul>
-          <div className=" w-11/12 h-px border-b border-[#8e8e8e50] mt-32 mx-auto" />
-        </div>
+        
+    
       </div>
     </>
   );

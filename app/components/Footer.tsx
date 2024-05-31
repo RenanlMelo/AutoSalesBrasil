@@ -106,7 +106,7 @@ export default function Footer() {
           <div className="mb-12 lg:mb-0 w-full">
             <span className="text-lg 2xl:text-2xl text-zinc-400 ">
               Entre em contato conosco via{" "}
-              <strong className="text-[#25D366]">Whatsapp</strong> e anuncie
+              <a href="https://wa.me/5515992485445" className="text-[#25D366] font-bold">Whatsapp</a> e anuncie
               imediatamente!
             </span>
             <div className="flex flex-col items-center justify-center h-full max-w-md">
@@ -130,7 +130,7 @@ export default function Footer() {
                 <button
                   type="submit"
                   onClick={handleButtonClick}
-                  className="bg-indigo-900 w-full cursor-pointer text-zinc-400 text-md md:text-lg font-semibold p-2 rounded-lg scale-100 hover:scale-105 hover:bg-indigo-950 duration-200"
+                  className="bg-indigo-900 w-full cursor-pointer text-zinc-400 text-md md:text-lg font-semibold p-2 rounded-lg hover:bg-indigo-950 duration-200"
                 >
                   Enviar
                 </button>
