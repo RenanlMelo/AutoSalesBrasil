@@ -19,7 +19,7 @@ export default async function ServicosResume() {
           <Link href="/servicos">
             <div className="text-[#8e8e8e] flex flex-col justify-center items-start w-full mb-8">
               <h2 className="text-2xl 2xl:text-3xl border-b border-zinc-500 p-2">Compra</h2>
-              <p className="text-base 2xl:text-lg max-w-2xl border-l border-zinc-500 p-4 shadow-textl">
+              <p className="text-base 2xl:text-lg max-w-2xl border-l border-zinc-500 p-4 shadow-textl hover:shadow-textl_hover duration-200">
                 Vai comprar o seu tão sonhado carro premium, mas não sabe por
                 onde começar?
               </p>
@@ -28,7 +28,7 @@ export default async function ServicosResume() {
           <Link href="/servicos">
             <div className="text-[#8e8e8e] flex flex-col justify-center items-end w-full mb-8">
               <h2 className="text-2xl 2xl:text-3xl border-b border-zinc-500 p-2">Venda</h2>
-              <p className="text-base 2xl:text-lg max-w-2xl border-r border-zinc-500 p-4 shadow-textr">
+              <p className="text-base 2xl:text-lg max-w-2xl border-r border-zinc-500 p-4 shadow-textr hover:shadow-textr_hover duration-200">
                 Chegou o momento de passar o seu veículo para frente e buscar
                 novas experiências premium no mundo automotivo. Mas como fazer
                 isso?
@@ -40,7 +40,7 @@ export default async function ServicosResume() {
               <h2 className="text-2xl 2xl:text-3xl border-b border-zinc-500 p-2">
                 Plano Content
               </h2>
-              <p className="text-base 2xl:text-lg max-w-2xl border-l border-zinc-500 p-4 shadow-textl">
+              <p className="text-base 2xl:text-lg max-w-2xl border-l border-zinc-500 p-4 shadow-textl hover:shadow-textl_hover duration-200">
                 Vai vender seu veículo e gostaria de fotos exclusivas para
                 chamar mais atenção?
               </p>

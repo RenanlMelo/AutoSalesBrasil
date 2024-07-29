@@ -24,14 +24,7 @@ export default async function ServicosPage() {
   return (
     <>
       <Navbar isFixed={false} />
-      {data.map((data: imageProduct) => (
-        <ServicosText
-          key={data._id}
-          image1={data.image1}
-          image2={data.image2}
-          image3={data.image3}
-        />
-      ))}
+      <ServicosText />
       <Footer />
     </>
   );

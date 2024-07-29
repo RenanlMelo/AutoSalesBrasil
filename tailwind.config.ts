@@ -89,7 +89,9 @@ const config = {
         division: "0 0 40px 0 rgba(0, 0, 0, 1)",
         send: "0 0 20px 0 rgba(24, 100, 199, .5)",
         textr: "-5px 7px 15px 0 rgba(0, 0, 0, 1)",
+        textr_hover: "-7px 10px 20px 0 rgba(0, 0, 0, 1)",
         textl: "5px 7px 15px 0 rgba(0, 0, 0, 1)",
+        textl_hover: "7px 10px 20px 0 rgba(0, 0, 0, 1)",
         card: "0px 0px 20px 0px rgba(250, 0, 0, 1)",
       },
       fontFamily: {
