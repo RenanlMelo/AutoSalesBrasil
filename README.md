@@ -1,24 +1,24 @@
-# 🚗 AutoSalesBrasil - E-commerce de Compra e Venda de Carros
+# 🚗 AutoSalesBrasil - Car Buying and Selling E-commerce
 
-## 📌 Sobre o Projeto
-O **AutoSalesBrasil** é uma plataforma de e-commerce para revenda de carros, permitindo que usuários comprem e vendam veículos de forma prática e segura. O site possui uma interface moderna e responsiva, além de uma estrutura robusta no backend para garantir o gerenciamento eficiente dos anúncios e transações.
+## 📌 About the Project
+**AutoSalesBrasil** is an e-commerce platform for car resale, allowing users to buy and sell vehicles in a practical and secure way. The site has a modern and responsive interface, along with a robust backend structure to ensure efficient management of listings and transactions.
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 ### **Frontend**
-- **Next.js** → Framework para React com otimizações de performance e SEO.
-- **Tailwind CSS** → Framework para estilização rápida e responsiva.
-- **Swiper.js** → Biblioteca para animações e carrosséis interativos.
-- **Axios** → Cliente HTTP para integração com a API.
+- **Next.js** → React framework with performance optimizations and SEO.
+- **Tailwind CSS** → Framework for fast and responsive styling.
+- **Swiper.js** → Library for animations and interactive carousels.
+- **Axios** → HTTP client for API integration.
 
 ### **Backend**
-- **Express.js** → Framework minimalista para criação do servidor.
-- **Sanity.io** → CMS headless para gerenciamento dinâmico de conteúdo.
-- **MongoDB** → Banco de dados NoSQL para armazenar informações sobre os veículos e usuários.
+- **Express.js** → Minimalist framework for server creation.
+- **Sanity.io** → Headless CMS for dynamic content management.
+- **MongoDB** → NoSQL database for storing vehicle and user information.
 
-## 🛠️ Funcionalidades
-- 📌 Página inicial com destaques e anúncios recentes.
-- 🚗 **Página de Anúncios** → Listagem de veículos disponíveis para compra.
-- 🛠️ **Página de Serviços** → Informações sobre compra, venda e avaliações de veículos.
-- ℹ️ **Página Sobre** → História e missão da loja de revenda.
-- 📩 **Contato via E-mail** → Formulário integrado para comunicação direta com a equipe.
-- 🔐 **Painel Administrativo** → Gerenciamento de anúncios e usuários.
+## 🛠️ Features
+- 📌 Homepage with highlights and recent listings.
+- 🚗 **Listings Page** → Display of vehicles available for purchase.
+- 🛠️ **Services Page** → Information about buying, selling, and evaluating vehicles.
+- ℹ️ **About Page** → History and mission of the car resale shop.
+- 📩 **Contact via Email** → Integrated form for direct communication with the team.
+- 🔐 **Admin Panel** → Management of listings and users.
